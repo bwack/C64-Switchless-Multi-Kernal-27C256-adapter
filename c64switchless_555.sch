@@ -14194,6 +14194,7 @@ DIN A4, landscape with location and doc. field</description>
 <text x="165.1" y="20.32" size="1.778" layer="91">C64 breadbin/longboard 27C256 adapter</text>
 <text x="162.56" y="15.24" size="1.778" layer="91">initial microcontroller-less design with 555+7474</text>
 <text x="165.1" y="10.16" size="1.778" layer="91">not completed. MCU footprint added</text>
+<text x="86.36" y="86.36" size="1.778" layer="91">OPTIONAL MCU</text>
 </plain>
 <instances>
 <instance part="IC2" gate="G$1" x="81.28" y="124.46"/>
@@ -14710,6 +14711,14 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="71.12" x2="17.78" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="X1" gate="-4" pin="1"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<wire x1="76.2" y1="83.82" x2="104.14" y2="83.82" width="0.1524" layer="91" style="longdash"/>
+<wire x1="104.14" y1="83.82" x2="104.14" y2="50.8" width="0.1524" layer="91" style="longdash"/>
+<wire x1="104.14" y1="50.8" x2="76.2" y2="50.8" width="0.1524" layer="91" style="longdash"/>
+<wire x1="76.2" y1="50.8" x2="76.2" y2="83.82" width="0.1524" layer="91" style="longdash"/>
 </segment>
 </net>
 </nets>
