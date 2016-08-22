@@ -7351,6 +7351,7 @@ DIN A4, landscape with location and doc. field</description>
 <text x="165.1" y="20.32" size="1.778" layer="91">C64 Breadbin/longboard ROM to 27C256</text>
 <text x="165.1" y="17.78" size="1.778" layer="91">adapter with switchless multikernal switch</text>
 <text x="165.1" y="10.16" size="1.778" layer="91">Design by BWACK</text>
+<text x="247.65" y="5.334" size="1.778" layer="91">Rev 1</text>
 </plain>
 <instances>
 <instance part="IC2" gate="G$1" x="109.22" y="83.82"/>

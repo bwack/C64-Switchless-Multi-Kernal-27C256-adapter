@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -79,7 +79,13 @@
 <text x="13.97" y="42.545" size="0.8128" layer="21" font="fixed" ratio="29">BWACK 2016</text>
 <text x="1.27" y="1.27" size="0.6096" layer="29" font="fixed">Quad Kernal Switch</text>
 <text x="5.715" y="5.5" size="0.6096" layer="21" rot="R340">RESET</text>
-<text x="11.43" y="0.5" size="0.6096" layer="21" rot="R70">Restore</text>
+<text x="13.335" y="3.04" size="0.6096" layer="21" rot="R70">Restore</text>
+<text x="13.97" y="1.27" size="0.6096" layer="23" font="fixed" rot="R90">LED</text>
+<text x="3.175" y="0.635" size="0.6096" layer="23" font="fixed">Revision 1</text>
+<text x="19.812" y="0.635" size="0.6096" layer="23" font="fixed">R</text>
+<text x="16.764" y="0.635" size="0.6096" layer="23" font="fixed">G</text>
+<text x="15.24" y="0.635" size="0.6096" layer="23" font="fixed">B</text>
+<text x="17.78" y="0.635" size="0.6096" layer="23" font="fixed">Gnd</text>
 </plain>
 <libraries>
 <library name="microchip">
