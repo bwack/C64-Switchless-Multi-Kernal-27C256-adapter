@@ -1,5 +1,6 @@
-// C64MultiKernel.c Rev 1.1 (2016-09-08)
+// C64MultiKernel.c Rev 1.1-disco (2016-09-09)
 // coded by BWACK in mikroC
+// -disco variant with instant select-mode on reset-button press
 
 // Multikernel switcher for the C64 breadbin/longboard
 // a 2332 ROM to 27C256 ROM adapter with four kernels
@@ -81,10 +82,10 @@ void main() {
   while(1) {
     setLED();
     if(STATE==IDLE_STATE) {
-      if(!RESTORE_N || !INTRST_N) buttontimer++;
+      if(!RESTORE_N) buttontimer++;
       else buttontimer=0;
       delay_ms(100);
-      if (buttontimer>15) { STATE=SELECT_STATE; old_button=0; kernalno=0; buttontimer=0;
+      if (buttontimer>15 || !INTRST_N) { STATE=SELECT_STATE; old_button=0; kernalno=0; buttontimer=0;
         RED_LED=~RED_LED;
         delay_ms(50);
         RED_LED=~RED_LED;
