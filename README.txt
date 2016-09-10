@@ -1,4 +1,4 @@
-README.txt (2016-09-09)
+README.txt (2016-09-10)
 
 C64 Switchless Multi Kernel Switch
 - 27C256 rom adapter for C64's with long motherboard
@@ -12,4 +12,5 @@ Project links:
   Github:   https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
 
 Changelog:
-Rev 1.1 (2016-09-08): sch+brd. Swapped signals #RESTORE and RED_LED, because GP3 on the MCU is input only.
+Rev 1.11 (2016-09-10): RGB Led header following RGB led pinout (Blue-Green-GND-Red)
+Rev 1.1  (2016-09-08): sch+brd. Swapped signals #RESTORE and RED_LED, because GP3 on the MCU is input only.
