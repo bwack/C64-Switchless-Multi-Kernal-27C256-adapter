@@ -79,12 +79,12 @@
 <text x="1.27" y="3.175" size="0.6096" layer="21" font="fixed">Quad Kernal Switch</text>
 <text x="1.27" y="-0.215" size="0.6096" layer="21">RESET</text>
 <text x="9.525" y="-0.135" size="0.6096" layer="21">Restore</text>
-<text x="19.05" y="0" size="0.6096" layer="23" font="fixed" rot="R180">RGB LEDs</text>
+<text x="19.05" y="0" size="0.6096" layer="21" font="fixed" rot="R180">RGB LEDs</text>
 <text x="1.27" y="1.905" size="0.6096" layer="21" font="fixed">Rev 1.11</text>
-<text x="18.8595" y="5.3975" size="0.6096" layer="23" font="fixed">RED</text>
-<text x="13.2715" y="5.3975" size="0.6096" layer="23" font="fixed">GREEN</text>
-<text x="13.0175" y="0.9525" size="0.6096" layer="23" font="fixed" rot="R90">BLUE</text>
-<text x="16.51" y="5.3975" size="0.6096" layer="23" font="fixed">GND</text>
+<text x="18.8595" y="5.3975" size="0.6096" layer="21" font="fixed">RED</text>
+<text x="13.2715" y="5.3975" size="0.6096" layer="21" font="fixed">GREEN</text>
+<text x="13.0175" y="0.9525" size="0.6096" layer="21" font="fixed" rot="R90">BLUE</text>
+<text x="16.51" y="5.3975" size="0.6096" layer="21" font="fixed">GND</text>
 </plain>
 <libraries>
 <library name="microchip">
