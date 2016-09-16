@@ -1,4 +1,4 @@
-// C64MultiKernel.c Rev 1.1 (2016-09-08)
+// C64MultiKernel.c Rev 1.12 (2016-09-17)
 // coded by BWACK in mikroC
 
 // Multikernel switcher for the C64 breadbin/longboard
@@ -10,12 +10,16 @@
 // EasyPIC5 development board
 // use any pic-programmer and load the .hex file
 
+// changes:
+//   2016-09-17 Rev 1.12 - removed kernal=0. Switch-case state machine.
+
+//#define DEBUG // uncomment this before debugging
 
 // Inputs:
-#define RESTORE_N GPIO.B3
+#define RESTORE_N GP3_bit
 // Outputs:
-#define RED_LED   GPIO.B2
-#define INTRST_N  GPIO.B1 // open-collector
+#define RED_LED   GP2_bit
+#define INTRST_N  GP1_bit // open-collector
 // Addresses on GPIO B4 and B5
 
 // finite state machine
@@ -30,8 +34,8 @@ char kernalno=0;
 
 
 void setkernal(char _kernal) {
-  GPIO.B4=0;
-  GPIO.B5=0;
+  GP4_bit=0;
+  GP5_bit=0;
   GPIO|=kernalno<<4;
 #ifndef DEBUG
   EEPROM_Write(0x00,kernalno);
@@ -50,7 +54,7 @@ void intres(void) {
 }
 
 void setLED(void) {
-  if(!GPIO.B4 && !GPIO.B5) RED_LED= 1;
+  if(!GP4_bit && !GP5_bit) RED_LED= 1;
   else RED_LED=0;
 }
 
@@ -67,6 +71,7 @@ void init(void) {
 #ifndef DEBUG
   kernalno=EEPROM_READ(0x00);
 #endif
+  GP3_bit=1; // presetting inputs for the debugger
   if(kernalno>3) kernalno=0; // incase EEPROM garbage.
   setkernal(kernalno);
   intres();
@@ -85,46 +90,51 @@ void main() {
 
   init();
   while(1) {
-    setLED();
-    if(STATE==IDLE_STATE) {
-      if(!RESTORE_N || !INTRST_N) buttontimer++;
-      else buttontimer=0;
-      delay_ms(100);
-      if (buttontimer>15) { STATE=SELECT_STATE; old_button=0; kernalno=0; buttontimer=0;
-        RED_LED=~RED_LED;
-        delay_ms(50);
-        RED_LED=~RED_LED;
-        delay_ms(50);
+      setLED();
 
-      }
-    }
-    
-    if(STATE==SELECT_STATE) {
-      if(!old_button && RESTORE_N && INTRST_N ) {
-        old_button=1;
-        delay_ms(20);
-      }
+    switch(STATE) {
 
-      if(old_button && (!RESTORE_N || !INTRST_N) ) {
-        old_button=0;
-        kernalno++;
-        kernalno&=0x03;
-        setkernal(kernalno);
-        delay_ms(20);
-      }
+      case IDLE_STATE:
 
-      if( RESTORE_N && INTRST_N ) {
-        i=0;
-        buttontimer++;
-        delay_ms(50);
-      } else buttontimer=0;
+        if(!RESTORE_N || !INTRST_N) buttontimer++;
+        else buttontimer=0;
+        delay_ms(100);
+        if (buttontimer>15) { STATE=SELECT_STATE; old_button=0; buttontimer=0;
+          RED_LED=~RED_LED;
+          delay_ms(50);                 //
+          RED_LED=~RED_LED;
+          delay_ms(50);
+        }
+        break;
 
-      if (buttontimer>30) {
-        STATE=IDLE_STATE;
-        old_button=1;
-        intres();
-        buttontimer=0;
-      }
+      case SELECT_STATE:
+
+        if(!old_button && RESTORE_N && INTRST_N ) {
+          old_button=1;
+          delay_ms(20);
+        }
+        if(old_button && (!RESTORE_N || !INTRST_N) ) {
+          old_button=0;
+          kernalno++;
+          kernalno&=0x03;
+          setkernal(kernalno);
+          delay_ms(20);
+        }
+        if( RESTORE_N && INTRST_N ) {
+          i=0;
+          buttontimer++;
+          delay_ms(50);
+        } else buttontimer=0;
+        if (buttontimer>30) {
+          STATE=IDLE_STATE;
+          old_button=1;
+          intres();
+          buttontimer=0;
+        }
+        break;
+
+      default:
+        break;
     }
   }
 }
