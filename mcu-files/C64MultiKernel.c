@@ -10,6 +10,7 @@
 // EasyPIC5 development board
 // use any pic-programmer and load the .hex file
 
+
 // Inputs:
 #define RESTORE_N GPIO.B3
 // Outputs:
@@ -32,7 +33,9 @@ void setkernal(char _kernal) {
   GPIO.B4=0;
   GPIO.B5=0;
   GPIO|=kernalno<<4;
+#ifndef DEBUG
   EEPROM_Write(0x00,kernalno);
+#endif
 }
 
 void intres(void) {
@@ -43,6 +46,7 @@ void intres(void) {
   RED_LED=~RED_LED;
   delay_ms(200); // was 500
   TRISIO.B1=1; // release INTRES_N
+  INTRST_N=1; // for the debugger
 }
 
 void setLED(void) {
@@ -60,7 +64,9 @@ void init(void) {
   INTRST_N=1;
   RESTORE_N=1;
   RED_LED=0;
+#ifndef DEBUG
   kernalno=EEPROM_READ(0x00);
+#endif
   if(kernalno>3) kernalno=0; // incase EEPROM garbage.
   setkernal(kernalno);
   intres();
