@@ -7,6 +7,7 @@ Designed by BWACK.
 CERN OPEN HARDWARE LICENSE v1.2
 http://www.ohwr.org/
 
+The Eagle CAD files are available on GitHub:
 https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
 
 All text above must be included in any redistribution
