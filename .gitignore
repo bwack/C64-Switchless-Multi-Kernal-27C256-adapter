@@ -1,0 +1,15 @@
+*.asm
+*.bmk
+*.ini
+*.brk
+*.cp
+*.dct
+*.dlt
+*.log
+*.dic
+*.wch
+mcu-files/C64MultiKernel.mcppi_callertable.txt
+*.mcl
+*.lst
+*.dbg
+*.cfg
