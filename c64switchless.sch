@@ -7325,7 +7325,7 @@ DIN A4, landscape with location and doc. field</description>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="U$1" library="microchip" deviceset="ICSP_MICROCHIP" device=""/>
+<part name="SV4" library="microchip" deviceset="ICSP_MICROCHIP" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
@@ -7337,8 +7337,10 @@ DIN A4, landscape with location and doc. field</description>
 <plain>
 <text x="165.1" y="20.32" size="1.778" layer="91">C64 Breadbin/longboard ROM to 27C256</text>
 <text x="165.1" y="17.78" size="1.778" layer="91">adapter with switchless multikernal switch</text>
-<text x="165.1" y="10.16" size="1.778" layer="91">Design by BWACK</text>
+<text x="165.1" y="12.7" size="1.778" layer="91">Design by BWACK</text>
 <text x="246.634" y="5.334" size="1.778" layer="91">Rev 1.11</text>
+<text x="165.1" y="5.08" size="1.778" layer="91">http://www.ohwr.org/</text>
+<text x="165.1" y="7.62" size="1.778" layer="91">CERN OPEN HARDWARE LICENSE v1.2</text>
 </plain>
 <instances>
 <instance part="IC2" gate="G$1" x="109.22" y="83.82"/>
@@ -7367,7 +7369,7 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="P+2" gate="VCC" x="134.62" y="129.54"/>
 <instance part="GND1" gate="1" x="134.62" y="116.84"/>
 <instance part="GND2" gate="1" x="50.8" y="109.22"/>
-<instance part="U$1" gate="G$1" x="78.74" y="45.72"/>
+<instance part="SV4" gate="G$1" x="78.74" y="45.72"/>
 <instance part="P+3" gate="VCC" x="106.68" y="58.42"/>
 <instance part="GND3" gate="1" x="106.68" y="45.72"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -7404,7 +7406,7 @@ DIN A4, landscape with location and doc. field</description>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
-<pinref part="U$1" gate="G$1" pin="3"/>
+<pinref part="SV4" gate="G$1" pin="3"/>
 <wire x1="106.68" y1="48.26" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -7445,7 +7447,7 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="2"/>
+<pinref part="SV4" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
 <wire x1="86.36" y1="50.8" x2="106.68" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="50.8" x2="106.68" y2="55.88" width="0.1524" layer="91"/>
@@ -7617,7 +7619,7 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="124.46" y1="86.36" x2="134.62" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="PAD2" gate="G$1" pin="P"/>
 <label x="132.08" y="86.36" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="5"/>
+<pinref part="SV4" gate="G$1" pin="5"/>
 <wire x1="134.62" y1="86.36" x2="144.78" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="43.18" x2="99.06" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="43.18" x2="99.06" y2="40.64" width="0.1524" layer="91"/>
@@ -7631,7 +7633,7 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="PAD1" gate="G$1" pin="P"/>
 <label x="50.8" y="63.5" size="1.778" layer="95"/>
 <wire x1="91.44" y1="63.5" x2="10.16" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="1"/>
+<pinref part="SV4" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="53.34" x2="91.44" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="GP3"/>
 <wire x1="91.44" y1="78.74" x2="96.52" y2="78.74" width="0.1524" layer="91"/>
@@ -7680,7 +7682,7 @@ DIN A4, landscape with location and doc. field</description>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="4"/>
+<pinref part="SV4" gate="G$1" pin="4"/>
 <wire x1="86.36" y1="45.72" x2="101.6" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="45.72" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="43.18" x2="152.4" y2="43.18" width="0.1524" layer="91"/>
