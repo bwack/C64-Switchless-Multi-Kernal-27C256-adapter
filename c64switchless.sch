@@ -149,14 +149,14 @@ package type P</description>
 <wire x1="5.08" y1="-2.54" x2="5.08" y2="2.54" width="0.1524" layer="21"/>
 <wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.1524" layer="21"/>
 <wire x1="-5.08" y1="2.54" x2="-5.08" y2="0.635" width="0.1524" layer="21"/>
-<pad name="1" x="-3.81" y="-3.81" drill="0.8128" rot="R90" first="yes"/>
-<pad name="2" x="-1.27" y="-3.81" drill="0.8128" rot="R90"/>
-<pad name="3" x="1.27" y="-3.81" drill="0.8128" rot="R90"/>
-<pad name="4" x="3.81" y="-3.81" drill="0.8128" rot="R90"/>
-<pad name="5" x="3.81" y="3.81" drill="0.8128" rot="R90"/>
-<pad name="6" x="1.27" y="3.81" drill="0.8128" rot="R90"/>
-<pad name="7" x="-1.27" y="3.81" drill="0.8128" rot="R90"/>
-<pad name="8" x="-3.81" y="3.81" drill="0.8128" rot="R90"/>
+<pad name="1" x="-3.81" y="-3.81" drill="1.016" diameter="1.778" rot="R90" first="yes"/>
+<pad name="2" x="-1.27" y="-3.81" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="3" x="1.27" y="-3.81" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="4" x="3.81" y="-3.81" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="5" x="3.81" y="3.81" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="6" x="1.27" y="3.81" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="7" x="-1.27" y="3.81" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="8" x="-3.81" y="3.81" drill="1.016" diameter="1.778" rot="R90"/>
 <text x="-5.2578" y="-2.54" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
 <text x="7.239" y="-2.54" size="1.778" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
 </package>
@@ -1998,8 +1998,8 @@ type 0207, grid 10 mm</description>
 <wire x1="2.921" y1="1.143" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
 <wire x1="2.921" y1="-1.143" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
 <wire x1="3.175" y1="-0.889" x2="3.175" y2="0.889" width="0.1524" layer="21"/>
-<pad name="1" x="-5.08" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="5.08" y="0" drill="0.8128" shape="octagon"/>
+<pad name="1" x="-5.08" y="0" drill="1.016" diameter="1.778"/>
+<pad name="2" x="5.08" y="0" drill="1.016" diameter="1.778"/>
 <text x="-3.048" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.2606" y="-0.635" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <rectangle x1="3.175" y1="-0.3048" x2="4.0386" y2="0.3048" layer="21"/>
@@ -6217,40 +6217,40 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-13.335" y="-1.016" size="1.778" layer="27">&gt;VALUE</text>
 </package>
 <package name="DIL28SPECIAL">
-<wire x1="17.78" y1="6.731" x2="-17.78" y2="6.731" width="0.1524" layer="21"/>
-<wire x1="-17.78" y1="-6.731" x2="17.78" y2="-6.731" width="0.1524" layer="21"/>
-<wire x1="17.78" y1="6.731" x2="17.78" y2="-6.731" width="0.1524" layer="21"/>
-<wire x1="-17.78" y1="6.731" x2="-17.78" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="-17.78" y1="-6.731" x2="-17.78" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="17.78" y1="6.35" x2="-17.78" y2="6.35" width="0.1524" layer="21"/>
+<wire x1="-17.78" y1="-6.35" x2="17.78" y2="-6.35" width="0.1524" layer="21"/>
+<wire x1="17.78" y1="6.35" x2="17.78" y2="-6.35" width="0.1524" layer="21"/>
+<wire x1="-17.78" y1="6.35" x2="-17.78" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="-17.78" y1="-6.35" x2="-17.78" y2="-1.016" width="0.1524" layer="21"/>
 <wire x1="-17.78" y1="1.016" x2="-17.78" y2="-1.016" width="0.1524" layer="21" curve="-180"/>
-<pad name="1" x="-16.51" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="2" x="-13.97" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="7" x="-1.27" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="8" x="1.27" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="3" x="-11.43" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="4" x="-8.89" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="6" x="-3.81" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="5" x="-6.35" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="9" x="3.81" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="10" x="6.35" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="11" x="8.89" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="12" x="11.43" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="13" x="13.97" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="14" x="16.51" y="-7.62" drill="0.8128" rot="R90"/>
-<pad name="15" x="16.51" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="16" x="13.97" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="17" x="11.43" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="18" x="8.89" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="19" x="6.35" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="20" x="3.81" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="21" x="1.27" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="22" x="-1.27" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="23" x="-3.81" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="24" x="-6.35" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="25" x="-8.89" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="26" x="-11.43" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="27" x="-13.97" y="7.62" drill="0.8128" rot="R90"/>
-<pad name="28" x="-16.51" y="7.62" drill="0.8128" rot="R90"/>
+<pad name="1" x="-16.51" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="2" x="-13.97" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="7" x="-1.27" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="8" x="1.27" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="3" x="-11.43" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="4" x="-8.89" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="6" x="-3.81" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="5" x="-6.35" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="9" x="3.81" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="10" x="6.35" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="11" x="8.89" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="12" x="11.43" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="13" x="13.97" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="14" x="16.51" y="-7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="15" x="16.51" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="16" x="13.97" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="17" x="11.43" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="18" x="8.89" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="19" x="6.35" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="20" x="3.81" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="21" x="1.27" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="22" x="-1.27" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="23" x="-3.81" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="24" x="-6.35" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="25" x="-8.89" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="26" x="-11.43" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="27" x="-13.97" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
+<pad name="28" x="-16.51" y="7.62" drill="1.016" diameter="1.778" rot="R90"/>
 <text x="-18.161" y="-6.604" size="1.778" layer="25" rot="R90">&gt;NAME</text>
 <text x="-9.779" y="-0.889" size="1.778" layer="27">&gt;VALUE</text>
 </package>
@@ -6665,32 +6665,16 @@ W = angled&lt;p&gt;
 </package>
 <package name="MA03-2">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-3.175" y1="2.54" x2="-1.905" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="2.54" x2="-1.27" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="1.905" x2="-0.635" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="2.54" x2="0.635" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="2.54" x2="1.27" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="-3.175" y1="2.54" x2="-3.81" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="1.905" x2="1.905" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="2.54" x2="3.175" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="2.54" x2="3.81" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="1.905" x2="3.81" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-1.905" x2="-1.905" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-1.905" x2="0.635" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-2.54" x2="-0.635" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-2.54" x2="-1.27" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="1.905" x2="-3.81" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="-1.905" x2="-3.175" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-2.54" x2="-3.175" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="-1.905" x2="3.175" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="-2.54" x2="1.905" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-2.54" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
-<pad name="1" x="-2.54" y="-1.27" drill="1.016"/>
-<pad name="3" x="0" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="5" x="2.54" y="-1.27" drill="1.016" shape="octagon"/>
-<pad name="2" x="-2.54" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="4" x="0" y="1.27" drill="1.016" shape="octagon"/>
-<pad name="6" x="2.54" y="1.27" drill="1.016" shape="octagon"/>
+<wire x1="-3.81" y1="2.54" x2="3.81" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="2.54" x2="3.81" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="2.54" x2="-3.81" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-2.54" x2="-3.81" y2="-2.54" width="0.1524" layer="21"/>
+<pad name="1" x="-2.54" y="-1.27" drill="1.016" diameter="1.778" shape="square"/>
+<pad name="3" x="0" y="-1.27" drill="1.016" diameter="1.778"/>
+<pad name="5" x="2.54" y="-1.27" drill="1.016" diameter="1.778"/>
+<pad name="2" x="-2.54" y="1.27" drill="1.016" diameter="1.778"/>
+<pad name="4" x="0" y="1.27" drill="1.016" diameter="1.778"/>
+<pad name="6" x="2.54" y="1.27" drill="1.016" diameter="1.778"/>
 <text x="-3.175" y="-4.191" size="1.27" layer="21" ratio="10">1</text>
 <text x="-3.81" y="2.921" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="4.064" y="0.635" size="1.27" layer="21" ratio="10">6</text>
@@ -6858,17 +6842,9 @@ W = angled&lt;p&gt;
 </package>
 <package name="1,6/0,9">
 <description>&lt;b&gt;THROUGH-HOLE PAD&lt;/b&gt;</description>
-<wire x1="-0.508" y1="0.762" x2="-0.762" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-0.762" y1="0.762" x2="-0.762" y2="0.508" width="0.1524" layer="21"/>
-<wire x1="-0.762" y1="-0.508" x2="-0.762" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="-0.762" y1="-0.762" x2="-0.508" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="0.508" y1="-0.762" x2="0.762" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="-0.762" x2="0.762" y2="-0.508" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="0.508" x2="0.762" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="0.762" x2="0.508" y2="0.762" width="0.1524" layer="21"/>
 <circle x="0" y="0" radius="0.635" width="0.1524" layer="51"/>
-<pad name="1" x="0" y="0" drill="0.9144" diameter="1.6002" shape="octagon"/>
-<text x="-0.762" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<pad name="1" x="0" y="0" drill="1.3" shape="square"/>
+<text x="-0.762" y="1.3" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="0" y="0.6" size="0.0254" layer="27">&gt;VALUE</text>
 </package>
 <package name="2,15/1,0">
@@ -7338,7 +7314,7 @@ DIN A4, landscape with location and doc. field</description>
 <text x="165.1" y="20.32" size="1.778" layer="91">C64 Breadbin/longboard ROM to 27C256</text>
 <text x="165.1" y="17.78" size="1.778" layer="91">adapter with switchless multikernal switch</text>
 <text x="165.1" y="12.7" size="1.778" layer="91">Design by BWACK</text>
-<text x="246.634" y="5.334" size="1.778" layer="91">Rev 1.11</text>
+<text x="246.634" y="5.334" size="1.778" layer="91">Rev 1.12</text>
 <text x="165.1" y="5.08" size="1.778" layer="91">http://www.ohwr.org/</text>
 <text x="165.1" y="7.62" size="1.778" layer="91">CERN OPEN HARDWARE LICENSE v1.2</text>
 </plain>
