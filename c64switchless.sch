@@ -7314,7 +7314,7 @@ DIN A4, landscape with location and doc. field</description>
 <text x="165.1" y="20.32" size="1.778" layer="91">C64 Breadbin/longboard ROM to 27C256</text>
 <text x="165.1" y="17.78" size="1.778" layer="91">adapter with switchless multikernal switch</text>
 <text x="165.1" y="12.7" size="1.778" layer="91">Design by BWACK</text>
-<text x="246.634" y="5.334" size="1.778" layer="91">Rev 1.12</text>
+<text x="246.634" y="5.334" size="1.778" layer="91">Rev 1.13</text>
 <text x="165.1" y="5.08" size="1.778" layer="91">http://www.ohwr.org/</text>
 <text x="165.1" y="7.62" size="1.778" layer="91">CERN OPEN HARDWARE LICENSE v1.2</text>
 </plain>
