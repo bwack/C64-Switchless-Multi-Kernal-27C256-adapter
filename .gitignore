@@ -12,3 +12,4 @@ mcu-files/C64MultiKernel.mcppi_callertable.txt
 *.mcl
 *.lst
 *.dbg
+Thumbs.db

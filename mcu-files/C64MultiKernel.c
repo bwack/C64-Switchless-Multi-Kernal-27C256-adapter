@@ -1,4 +1,4 @@
-// C64MultiKernel.c Rev 1.12 (2016-09-17)
+// C64MultiKernel.c Rev 1.13 (2016-10-22)
 // coded by BWACK in mikroC
 
 // Multikernel switcher for the C64 breadbin/longboard
@@ -11,6 +11,7 @@
 // use any pic-programmer and load the .hex file
 
 // changes:
+//   2016-10-22 Rev 1-13 - putting the mcu to sleep
 //   2016-09-17 Rev 1.12 - removed kernal=0. Switch-case state machine.
 
 //#define DEBUG // uncomment this before debugging
@@ -24,14 +25,11 @@
 
 // finite state machine
 #define IDLE_STATE 0
-#define RESET_STATE 1
 #define SELECT_STATE 2
-
 
 char STATE=IDLE_STATE;
 char buttontimer=0, old_button;
 char kernalno=0;
-
 
 void setkernal(char _kernal) {
   GP4_bit=0;
@@ -61,6 +59,7 @@ void setLED(void) {
 void init(void) {
   char _i;
   OPTION_REG=0;
+//  OPTION_REG=0b0001110; // about 1s watchdog timer.
   WPU.WPU1=1;
   CMCON=0x07; // digital IO
 //ANSEL=0; // only defined for pic12f675
@@ -76,19 +75,24 @@ void init(void) {
   setkernal(kernalno);
   intres();
 
-  for(_i=0; _i<10; _i++) {
+  IOC = 0b00001010; // GPIO interrupt-on-change mask
+  GPIE_bit=1;       // GPIO Interrupt enable, on
+  GIE_bit=0;        // Globale interrupt enable, off
+
+  for(_i=0; _i<5; _i++) {
+    //asm { CLRWDT };
     RED_LED=1;
     delay_ms(50);
     RED_LED=0;
     delay_ms(50);
   }
-  
 }
 
 void main() {
   char i;
-
+//  asm { CLRWDT };
   init();
+
   while(1) {
       setLED();
 
@@ -96,8 +100,13 @@ void main() {
 
       case IDLE_STATE:
 
-        if(!RESTORE_N || !INTRST_N) buttontimer++;
-        else buttontimer=0;
+        if(!RESTORE_N || !INTRST_N)
+          buttontimer++;
+        else {
+          buttontimer=0;
+          asm {sleep};
+          GPIF_bit=0;
+        }
         delay_ms(100);
         if (buttontimer>15) { STATE=SELECT_STATE; old_button=0; buttontimer=0;
           RED_LED=~RED_LED;
