@@ -2,7 +2,7 @@
 Name=P12F629
 Clock=4000000
 [MEMORY_MODEL]
-Value=0
+Value=-1
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
@@ -12,7 +12,7 @@ Value=0
 [USE_HEAP]
 Value=0
 [HEAP_SIZE]
-Value=0
+Value=2000
 [EEPROM_DEFINITION]
 Value=
 [FILES]
@@ -33,10 +33,10 @@ Count=0
 [OTHER_FILES]
 Count=0
 [SEARCH_PATH]
-Count=3
-Path0=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\
-Path1=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\
-Path2=C:\Mine Dokumenter\eagle\projects\C64-SwitchlessMultiKernal\C64-Switchless-Multi-Kernal-27C256-adapter\mcu-files\
+Count=5
+Path0=C:\mikroC PRO for PIC\Defs\
+Path1=C:\mikroC PRO for PIC\Uses\P16\
+Path2=C:\MyProjects\C64MultiKernel\
 [HEADER_PATH]
 Count=0
 [HEADERS]
