@@ -1,4 +1,4 @@
-// C64MultiKernel.c Rev 1.13 (2016-10-22)
+// C64MultiKernel.c Rev 1.13.1 (2017-11-02)
 // coded by BWACK in mikroC
 
 // Multikernel switcher for the C64 breadbin/longboard
@@ -6,12 +6,18 @@
 // The microcontroller program flips through the four kernels at the press of
 // restore key, in other words its a 'switchless' design.
 
-// MCU: PIC12F629 8 pin PDIP
+// MCU: PIC12F629 or PIC12F675
 // EasyPIC5 development board
-// use any pic-programmer and load the .hex file
+// use any pic-programmer and load the .hex file with same name as your PIC
+
+// Project settings:
+// 4MHz Intosc - I/O on GP4
+// All functions disabled (MCLR, brownout etc.)
+
 
 // changes:
-//   2016-10-22 Rev 1-13 - putting the mcu to sleep
+//   2017-11-02 Rev 1.13.1 - Added support for PIC12F675
+//   2016-10-22 Rev 1.13 - putting the mcu to sleep
 //   2016-09-17 Rev 1.12 - removed kernal=0. Switch-case state machine.
 
 //#define DEBUG // uncomment this before debugging
@@ -62,6 +68,10 @@ void init(void) {
 //  OPTION_REG=0b0001110; // about 1s watchdog timer.
   WPU.WPU1=1;
   CMCON=0x07; // digital IO
+#ifdef P12F675
+  ANSEL=0;
+#endif
+  
 //ANSEL=0; // only defined for pic12f675
   TRISIO=0b00001011;
   INTRST_N=1;

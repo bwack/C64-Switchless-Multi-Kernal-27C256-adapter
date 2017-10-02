@@ -33,10 +33,11 @@ Count=0
 [OTHER_FILES]
 Count=0
 [SEARCH_PATH]
-Count=5
+Count=4
 Path0=C:\mikroC PRO for PIC\Defs\
 Path1=C:\mikroC PRO for PIC\Uses\P16\
-Path2=C:\MyProjects\C64MultiKernel\
+Path2=C:\C64-Switchless-Multi-Kernal-27C256-adapter\mcu-files\
+Path3=C:\MyProjects\C64MultiKernel\
 [HEADER_PATH]
 Count=0
 [HEADERS]
