@@ -25,7 +25,7 @@ Eagle says, What ? :
 
 RGB LED assembly:
 Qty    Value       
-1      5mm RGB LED
+1      5mm RGB LED Common Cathode
 300mm  4 wire rainbow IDC cable
 1      2x3 IDC connector
 80mm   heat shrink tubing 3.2mm/1.6mm 2:1 thin wall black
