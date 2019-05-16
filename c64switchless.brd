@@ -1655,15 +1655,15 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="3.048" y="2.12725" size="0.6096" layer="25" ratio="10" display="off"/>
 <attribute name="VALUE" x="3.81" y="1.71125" size="0.0254" layer="27"/>
 </element>
-<element name="R1" library="rcl" package="0207/10" value="2k" x="12.7" y="15.24" smashed="yes" rot="R90">
+<element name="R1" library="rcl" package="0207/10" value="1k" x="12.7" y="15.24" smashed="yes" rot="R90">
 <attribute name="NAME" x="12.065" y="21.6154" size="0.9906" layer="25" ratio="10"/>
 <attribute name="VALUE" x="13.1826" y="13.6144" size="0.9906" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R2" library="rcl" package="0207/10" value="2k" x="15.24" y="15.24" smashed="yes" rot="R90">
+<element name="R2" library="rcl" package="0207/10" value="3k3" x="15.24" y="15.24" smashed="yes" rot="R90">
 <attribute name="NAME" x="14.605" y="21.6154" size="0.9906" layer="25" ratio="10"/>
 <attribute name="VALUE" x="15.7226" y="13.6144" size="0.9906" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="R3" library="rcl" package="0207/10" value="2k" x="10.16" y="15.24" smashed="yes" rot="R90">
+<element name="R3" library="rcl" package="0207/10" value="560R" x="10.16" y="15.24" smashed="yes" rot="R90">
 <attribute name="NAME" x="9.525" y="21.6154" size="0.9906" layer="25" ratio="10"/>
 <attribute name="VALUE" x="10.6426" y="13.6144" size="0.9906" layer="27" ratio="10" rot="R90"/>
 </element>

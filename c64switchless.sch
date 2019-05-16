@@ -7293,9 +7293,9 @@ DIN A4, landscape with location and doc. field</description>
 <part name="P+7" library="supply1" deviceset="VCC" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="0207/10" value="2k"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="0207/10" value="2k"/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="0207/10" value="2k"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="0207/10" value="1k"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="0207/10" value="3k3"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="0207/10" value="560R"/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="C1" library="rcl" deviceset="C-EU" device="025-024X044" value="100n"/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
