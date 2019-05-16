@@ -13,5 +13,3 @@ mcu-files/C64MultiKernel.mcppi_callertable.txt
 *.lst
 *.dbg
 Thumbs.db
-*.png
-*.jpg
