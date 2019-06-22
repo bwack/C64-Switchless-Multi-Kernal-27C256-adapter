@@ -1,5 +1,7 @@
 README.txt (2016-09-28)
 
+![logo](User&#32;Guide/SKS64-Logos-Ver2.png)
+
 C64 Switchless Multi Kernel Switch
 - 27C256 rom adapter for C64's with long motherboard
 
