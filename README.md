@@ -17,18 +17,18 @@ All text above must be included in any redistribution
 Note: longboards (not 250469) and shortboards (250469) are sometimes mixed up with C64C and C64, so you must open the machine up to be sure you've got the longboard.
 
 Project links:
-  lemon64:  http://www.lemon64.com/forum/viewtopic.php?p=747333
-  playlist: https://www.youtube.com/watch?v=oGaI8yLwjh4&list=PLtQOf_JULmrQTB7486X5pXG1Aaxbl_RdE
-  OSH Park: https://oshpark.com/profiles/bwack
-  Github:   https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
+- lemon64:  http://www.lemon64.com/forum/viewtopic.php?p=747333
+- playlist: https://www.youtube.com/watch?v=oGaI8yLwjh4&list=PLtQOf_JULmrQTB7486X5pXG1Aaxbl_RdE
+- OSH Park: https://oshpark.com/profiles/bwack
+- Github:   https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
 
 Changelog:
-Rev 1.13 (2016-09-28): Moved IC2 down to clear space for the socket in the c64.
+- Rev 1.13 (2016-09-28): Moved IC2 down to clear space for the socket in the c64.
                        Changes to the silk screen.
-Rev 1.12 (2016-09-18): Increased padd and hole sizes. Removed ground fill from top layer.
+- Rev 1.12 (2016-09-18): Increased padd and hole sizes. Removed ground fill from top layer.
          (2016-09-17): Added CERN OHL v1.2 License.
-Rev 1.11 (2016-09-10): RGB Led header following RGB led pinout (Blue-Green-GND-Red).
+- Rev 1.11 (2016-09-10): RGB Led header following RGB led pinout (Blue-Green-GND-Red).
                        Editted silkscreen.
-Rev 1.1  (2016-09-08): sch+brd. Swapped signals #RESTORE and RED_LED, because GP3 on the
+- Rev 1.1  (2016-09-08): sch+brd. Swapped signals #RESTORE and RED_LED, because GP3 on the
                        MCU is input only.
 Note: The schematic revision follows the board revision number.
