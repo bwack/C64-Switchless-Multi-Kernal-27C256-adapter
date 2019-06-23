@@ -16,6 +16,9 @@ All text above must be included in any redistribution
 
 Note: longboards (not 250469) and shortboards (250469) are sometimes mixed up with C64C and C64, so you must open the machine up to be sure you've got the longboard.
 
+For use with existing LED, checkout tebl's github repository. His kernal switcher is based on this design and has a different firmware behaviour that suits a single LED better.
+https://github.com/tebl/C64-Kernal-Switcher
+
 Project links:
 - lemon64:  http://www.lemon64.com/forum/viewtopic.php?p=747333
 - playlist: https://www.youtube.com/watch?v=oGaI8yLwjh4&list=PLtQOf_JULmrQTB7486X5pXG1Aaxbl_RdE
