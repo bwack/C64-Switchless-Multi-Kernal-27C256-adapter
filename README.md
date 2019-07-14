@@ -39,6 +39,7 @@ Please see the User Guide for more information regarding build and programming.
   - Eagle -> KiCad.
   - PIC12F629 -> ATTINY45/85. Note: Pinout is different! Don't mix up PIC12F with ATTINY!
   - Programming with Arduino IDE, using USBasp or Arduino UNO as ISP.
+  - Use the original LED or a common cathode RGB LED.
 - Rev 1.13 (2016-09-28):
   - Moved IC2 down to clear space for the socket in the c64.
   - Changes to the silk screen.
