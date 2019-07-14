@@ -17,6 +17,9 @@ All text above must be included in any redistribution
 # C64 Switchless Quad Kernal Switcher
 (C64 longboard version)
 
+![3D_front](KiCad/C64_Switchless_3D_front.png)
+
+
 This PCB can be used as a 28 to 24 pin EPROM adapter. With the ATTINY45/85 it is transformed into a kernal switcher. You can program it using Arduino to switch between four C64 kernals.
 
 Note: longboards (not 250469) and shortboards (250469) are sometimes mixed up with C64C and C64, so you must open the machine up to be sure you've got the longboard. For the short board check out DiscoHR's project. https://github.com/discoHR/C64C-C128-multikernal-adapter
