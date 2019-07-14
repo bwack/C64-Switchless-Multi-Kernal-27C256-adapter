@@ -1,4 +1,4 @@
-README.txt (2019-07-12)
+README.txt
 
 ![logo](User&#32;Guide/SKS64-Logos-Ver2.png)
 
