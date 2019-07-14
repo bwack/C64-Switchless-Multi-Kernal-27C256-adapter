@@ -1,4 +1,4 @@
-README.txt (2016-09-28)
+README.txt (2019-07-12)
 
 ![logo](User&#32;Guide/SKS64-Logos-Ver2.png)
 
@@ -14,24 +14,40 @@ https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
 
 All text above must be included in any redistribution
 
-Note: longboards (not 250469) and shortboards (250469) are sometimes mixed up with C64C and C64, so you must open the machine up to be sure you've got the longboard.
+# C64 Switchless Quad Kernal Switcher
+(C64 longboard version)
 
-For use with existing LED, checkout tebl's github repository. His kernal switcher is based on this design and has a different firmware behaviour that suits a single LED better.
-https://github.com/tebl/C64-Kernal-Switcher
+This PCB can be used as a 28 to 24 pin EPROM adapter. With the ATTINY45/85 it is transformed into a kernal switcher. You can program it using Arduino to switch between four C64 kernals.
 
-Project links:
+Note: longboards (not 250469) and shortboards (250469) are sometimes mixed up with C64C and C64, so you must open the machine up to be sure you've got the longboard. For the short board check out DiscoHR's project. https://github.com/discoHR/C64C-C128-multikernal-adapter
+
+In 1.20 of this project it is possible to use the original LED and cable assembly. This was an idea I found on tebl's repository based on this design.  https://github.com/tebl/C64-Kernal-Switcher
+
+Please see the User Guide for more information regarding build and programming.
+
+# Project links
 - lemon64:  http://www.lemon64.com/forum/viewtopic.php?p=747333
 - playlist: https://www.youtube.com/watch?v=oGaI8yLwjh4&list=PLtQOf_JULmrQTB7486X5pXG1Aaxbl_RdE
 - OSH Park: https://oshpark.com/profiles/bwack
 - Github:   https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
 
-Changelog:
-- Rev 1.13 (2016-09-28): Moved IC2 down to clear space for the socket in the c64.
-                       Changes to the silk screen.
-- Rev 1.12 (2016-09-18): Increased padd and hole sizes. Removed ground fill from top layer.
-         (2016-09-17): Added CERN OHL v1.2 License.
-- Rev 1.11 (2016-09-10): RGB Led header following RGB led pinout (Blue-Green-GND-Red).
-                       Editted silkscreen.
-- Rev 1.1  (2016-09-08): sch+brd. Swapped signals #RESTORE and RED_LED, because GP3 on the
-                       MCU is input only.
+# Change log
+- Rev 1.20 (2019-07-12):
+  - Eagle -> KiCad.
+  - PIC12F629 -> ATTINY45/85. Note: Pinout is different! Don't mix up PIC12F with ATTINY!
+  - Programming with Arduino IDE, using USBasp or Arduino UNO as ISP.
+- Rev 1.13 (2016-09-28):
+  - Moved IC2 down to clear space for the socket in the c64.
+  - Changes to the silk screen.
+- Rev 1.12 (2016-09-18):
+  - Increased padd and hole sizes.
+  - Removed ground fill from top layer.
+  - Added CERN OHL v1.2 License.
+- Rev 1.11 (2016-09-10):
+  - RGB Led header following RGB led pinout (Blue-Green-GND-Red).
+  - Editted silkscreen.
+- Rev 1.1  (2016-09-08):
+  - sch+brd.
+  - Swapped signals #RESTORE and RED_LED. GP3 is input only.
+
 Note: The schematic revision follows the board revision number.

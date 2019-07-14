@@ -1,0 +1,33 @@
+Partlist exported from C:/Mine Dokumenter/eagle/projects/C64-SwitchlessMultiKernal/c64switchless.sch at 10.09.2016 17:06:57
+(edited)
+
+PCB Assembly variant: 
+
+Qty Value            Device          Parts     
+1   27C256 ROM       DIL28ROUND      IC1
+2   Rounded pin list MA12-1ROUND     SV1, SV2  
+1   RGB LED header   MA03-2          SV3       
+1   1k               R-EU_0207/10    R1
+1   3k3              R-EU_0207/10    R2
+1   560R             R-EU_0207/10    R3
+1   100n             C-EU025-024X044 C1        
+1   PIC12F629P       PIC12F629P      IC2       
+
+Eagle says, What ? :
+- IC1:      27C256 ROM = socket for 28 pin IC.
+- IC2:      Microcontroller PIC12F629P, 8 pin PDIP
+- SV1, SV2: 2x12pin rounded pinlists on the bottom side
+            These goes into the C64 socket, and into the
+            adapter.
+- SV3:      RGB LED assembly header.
+            Standard 2x3 male header pinlist 2.56mm pitch
+- R1,R2,R3: Resistors. Controls the brightness of the RGB LEDs.
+- C1:       100nF ceramic capacitor, 2.56mm pitch
+
+
+RGB LED assembly:
+Qty    Value       
+1      5mm RGB LED Common Cathode
+300mm  4 wire rainbow IDC cable
+1      2x3 IDC connector
+80mm   heat shrink tubing 3.2mm/1.6mm 2:1 thin wall black
