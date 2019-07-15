@@ -30,6 +30,14 @@ It can be programmed with ISP programmers. You can use an Arduino Uno as ISP. Pl
 
 ![3D_front](User&#32;Guide/programming_isp.png)
 
+# Via locations
+You can solder 1x1mm pin headers into vias to wire up RESTORE, RESET and EXROM.
+
+![3D_front](User&#32;Guide/wiring_326298.png)
+![3D_front](User&#32;Guide/wiring_250407.png)
+![3D_front](User&#32;Guide/wiring_250425.png)
+![3D_front](User&#32;Guide/wiring_250466.png)
+
 
 # Project links
 - lemon64:  http://www.lemon64.com/forum/viewtopic.php?p=747333
