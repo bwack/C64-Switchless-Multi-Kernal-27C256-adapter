@@ -2,6 +2,8 @@ README.txt
 
 ![logo](User&#32;Guide/SKS64-Logos-Ver2.png)
 
+![3D_front](User&#32;Guide/Board_overview.png)
+
 C64 Switchless Multi Kernel Switch
 - 27C256 rom adapter for C64's with long motherboard
 
@@ -17,16 +19,17 @@ All text above must be included in any redistribution
 # C64 Switchless Quad Kernal Switcher
 (C64 longboard version)
 
-![3D_front](KiCad/C64_Switchless_3D_front.png)
-
-
 This PCB can be used as a 28 to 24 pin EPROM adapter. With the ATTINY45/85 it is transformed into a kernal switcher. You can program it using Arduino to switch between four C64 kernals.
 
 Note: longboards (not 250469) and shortboards (250469) are sometimes mixed up with C64C and C64, so you must open the machine up to be sure you've got the longboard. For the short board check out DiscoHR's project. https://github.com/discoHR/C64C-C128-multikernal-adapter
 
 In 1.20 of this project it is possible to use the original LED and cable assembly. This was an idea I found on tebl's repository based on this design.  https://github.com/tebl/C64-Kernal-Switcher
 
-Please see the User Guide for more information regarding build and programming.
+# Programming
+It can be programmed with ISP programmers. You can use an Arduino Uno as ISP. Please see the User Guide for more information regarding build and programming.
+
+![3D_front](User&#32;Guide/programming_isp.png)
+
 
 # Project links
 - lemon64:  http://www.lemon64.com/forum/viewtopic.php?p=747333
