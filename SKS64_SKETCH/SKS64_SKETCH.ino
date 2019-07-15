@@ -11,7 +11,7 @@
  * - Clock: Internal 1 MHz
  * 
  * Select "Burn Bootloader". This function will write the
- * fusebits and set the ATTiny to 1 MHz. This is a illnamed
+ * fusebits and set the ATTiny to 1 MHz. This is an illnamed
  * function. On the ATtiny there is no bootloader.
  *
  */
@@ -33,7 +33,7 @@ int rom=0;
 #define STATE_IDLE 0
 #define STATE_MENU 1
 #define STATE_RESET 2
-#define PRESSTIME 12
+#define PRESSTIME 20
 #define MENUTIMEOUT 20
 int state=STATE_IDLE;
 int next_state=STATE_IDLE;
