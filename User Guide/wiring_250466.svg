@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="wiring_250466.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath931">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect933"
+         width="5.7013583"
+         height="8.2340612"
+         x="59.940617"
+         y="85.846512" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath986">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect988"
+         width="5.7013583"
+         height="8.2340612"
+         x="79.406387"
+         y="82.917191" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1127">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect1129"
+         width="5.7013583"
+         height="8.2340612"
+         x="158.25371"
+         y="96.121964" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath942">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect944"
+         width="5.7013583"
+         height="8.2340612"
+         x="75.595551"
+         y="105.90981"
+         inkscape:export-filename="C:\Users\hada\text952-8-0.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath942-8">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect944-9"
+         width="5.7013583"
+         height="8.2340612"
+         x="75.595551"
+         y="105.90981"
+         inkscape:export-filename="C:\Users\hada\text952-8-0.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1021">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect1023"
+         width="5.7013583"
+         height="8.2340612"
+         x="142.59885"
+         y="81.086906"
+         inkscape:export-filename="C:\Users\hada\text952-8-0.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath886">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect888"
+         width="5.7013583"
+         height="8.2340612"
+         x="124.42396"
+         y="101.86635"
+         inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath938">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect940"
+         width="5.7013583"
+         height="8.2340612"
+         x="129.10574"
+         y="104.39478"
+         inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath990">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect992"
+         width="5.7013583"
+         height="8.2340612"
+         x="56.721371"
+         y="94.380623"
+         inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath887">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect889"
+         width="5.7013583"
+         height="8.2340612"
+         x="116.22816"
+         y="90.713951"
+         inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath939">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect941"
+         width="5.7013583"
+         height="8.2340612"
+         x="112.39605"
+         y="126.00848"
+         inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath991">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         id="rect993"
+         width="5.7013583"
+         height="8.2340612"
+         x="52.13488"
+         y="123.83814"
+         inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="480.82044"
+     inkscape:cy="1041.9043"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="1138"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#f7f0d0;fill-opacity:1;stroke:#ffaa00;stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.06046514;paint-order:markers stroke fill;stroke-linejoin:round"
+       id="rect1181"
+       width="175.86334"
+       height="48.108513"
+       x="17.105249"
+       y="23.583273"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <image
+       sodipodi:absref="D:\Documents\Electronics\Commodore 64 128\250466\board 250466.jpg"
+       y="26.912018"
+       x="102.80394"
+       id="image866"
+       xlink:href="file:///D:/Documents/Electronics/Commodore%2064%20128/250466/board%20250466.jpg"
+       preserveAspectRatio="none"
+       height="40.298454"
+       width="83.5923"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.06511625;paint-order:markers stroke fill"
+       id="rect869"
+       width="23.440113"
+       height="33.852863"
+       x="21.97238"
+       y="28.903107"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.03255813;paint-order:markers stroke fill"
+       id="rect869-4"
+       width="23.440113"
+       height="33.852863"
+       x="48.530796"
+       y="28.997601"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.06046514;paint-order:markers stroke fill"
+       id="rect869-4-8"
+       width="23.440113"
+       height="33.852863"
+       x="75.278198"
+       y="28.997601"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="24.224249"
+       y="67.268417"
+       id="text952"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan950"
+         x="24.224249"
+         y="67.268417"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">RESTORE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="53.839596"
+       y="67.330528"
+       id="text952-8"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan950-1"
+         x="53.839596"
+         y="67.330528"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">RESET</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="79.778603"
+       y="67.341499"
+       id="text952-8-0"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan950-1-3"
+         x="79.778603"
+         y="67.341499"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">EXROM</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect869-2-4-0"
+       width="5.7013583"
+       height="8.2340612"
+       x="140.06485"
+       y="47.528172"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:#dd9a00;fill-opacity:1;stroke:#ffaa00;stroke-width:0.28438523;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.31627909;paint-order:markers stroke fill"
+       id="rect830-9"
+       width="2.6605692"
+       height="6.6581521"
+       x="121.03344"
+       y="38.768223"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.35752296px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000001;fill-opacity:1;stroke:none;stroke-width:0.28393808"
+       x="-25.26898"
+       y="127.07202"
+       id="text828-8"
+       transform="matrix(0.16506738,-0.97712223,0.99605835,0.16192927,0,0)"
+       inkscape:transform-center-x="-1.8869108"
+       inkscape:transform-center-y="0.90308437"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan826-1"
+         x="-25.26898"
+         y="127.07202"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.27150464px;font-family:'Adobe Arabic';-inkscape-font-specification:'Adobe Arabic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000001;fill-opacity:1;stroke-width:0.28393808">KERNAL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffc800;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="130.34187"
+       y="65.492149"
+       id="text828-4-7"
+       transform="rotate(0.19407679)"
+       inkscape:transform-center-x="0.55978019"
+       inkscape:transform-center-y="1.8550852"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan826-6-7"
+         x="130.34187"
+         y="65.492149"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffc800;fill-opacity:1;stroke-width:0.26458332">250466</tspan></text>
+    <image
+       sodipodi:absref="D:\Documents\Electronics\Commodore 64 128\250466\board 250466.jpg"
+       y="70.097794"
+       x="78.967239"
+       id="image866-1"
+       xlink:href="file:///D:/Documents/Electronics/Commodore%2064%20128/250466/board%20250466.jpg"
+       preserveAspectRatio="none"
+       height="40.298458"
+       width="83.5923"
+       clip-path="url(#clipPath887)"
+       transform="matrix(4.112873,0,0,4.112873,-402.75344,-344.09735)"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path954-70-1-5-5-2"
+       cx="91.304878"
+       cy="40.519531"
+       r="1.1339285"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect869-2-4-0-9"
+       width="5.7013583"
+       height="8.2340612"
+       x="130.75209"
+       y="33.685795"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <image
+       sodipodi:absref="D:\Documents\Electronics\Commodore 64 128\250466\board 250466.jpg"
+       y="119.2347"
+       x="84.447899"
+       id="image866-5"
+       xlink:href="file:///D:/Documents/Electronics/Commodore%2064%20128/250466/board%20250466.jpg"
+       preserveAspectRatio="none"
+       height="40.298458"
+       width="83.5923"
+       clip-path="url(#clipPath939)"
+       transform="matrix(4.1166691,0,0,4.1166691,-414.16655,-489.73761)"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path954-70-1-5-5"
+       cx="64.241966"
+       cy="37.082603"
+       r="1.1339285"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect869-2-4-0-9-9"
+       width="5.7013583"
+       height="8.2340612"
+       x="105.06152"
+       y="39.071957"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <image
+       sodipodi:absref="D:\Documents\Electronics\Commodore 64 128\250466\board 250466.jpg"
+       y="111.6782"
+       x="49.877296"
+       id="image866-3"
+       xlink:href="file:///D:/Documents/Electronics/Commodore%2064%20128/250466/board%20250466.jpg"
+       preserveAspectRatio="none"
+       height="40.298458"
+       width="83.5923"
+       clip-path="url(#clipPath991)"
+       transform="matrix(4.125594,0,0,4.125594,-193.11497,-482.00278)"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffaa00;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path954-70-1-5-5-9"
+       cx="34.210499"
+       cy="57.860592"
+       r="1.1339285"
+       inkscape:export-filename="C:\Users\hada\Desktop\text952-8-0.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+  </g>
+</svg>
