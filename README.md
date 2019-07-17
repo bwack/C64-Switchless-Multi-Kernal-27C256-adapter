@@ -1,8 +1,8 @@
 README.txt
 
-![logo](User&#32;Guide/SKS64-Logos-Ver2.png)
+![logo](User&#32;Guide/media/SKS64-Logos-Ver2.png)
 
-![3D_front](User&#32;Guide/Board_overview.png)
+![3D_front](User&#32;Guide/media/Board_overview.png)
 
 C64 Switchless Multi Kernel Switch
 - 27C256 rom adapter for C64's with long motherboard
@@ -28,15 +28,15 @@ In 1.20 of this project it is possible to use the original LED and cable assembl
 # Programming
 It can be programmed with ISP programmers. You can use an Arduino Uno as ISP. Please see the User Guide for more information regarding build and programming.
 
-![3D_front](User&#32;Guide/programming_isp.png)
+![3D_front](User&#32;Guide/media/programming_isp.png)
 
 # Via locations
 You can solder 1x1mm pin headers into vias to wire up RESTORE, RESET and EXROM.
 
-![3D_front](User&#32;Guide/wiring_326298.png)
-![3D_front](User&#32;Guide/wiring_250407.png)
-![3D_front](User&#32;Guide/wiring_250425.png)
-![3D_front](User&#32;Guide/wiring_250466.png)
+![3D_front](User&#32;Guide/media/wiring_326298.png)
+![3D_front](User&#32;Guide/media/wiring_250407.png)
+![3D_front](User&#32;Guide/media/wiring_250425.png)
+![3D_front](User&#32;Guide/media/wiring_250466.png)
 
 
 # Project links
