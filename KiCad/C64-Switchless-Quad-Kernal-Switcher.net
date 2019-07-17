@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source D:\Documents\GitHub\C64-Switchless-Multi-Kernal-27C256-adapter\KiCad\C64-Switchless-Quad-Kernal-Switcher.sch)
-    (date "13.07.2019 16:07:25")
+    (date "15.07.2019 17:13:26")
     (tool "Eeschema (5.1.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -65,7 +65,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5D2FB77A))
     (comp (ref C1)
-      (value C)
+      (value 100nF)
       (footprint Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm)
       (datasheet ~)
       (libsource (lib pspice) (part C) (description "Capacitor symbol for simulation only"))

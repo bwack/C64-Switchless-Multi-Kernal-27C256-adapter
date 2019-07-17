@@ -1,0 +1,9 @@
+Reference, Quantity, Value, Footprint, Datasheet
+C1 ,1,"100nF","Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm","~"
+J1 J2 ,2,"Pinlist_12pin","Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical","~"
+J3 ,1,"27C256_28PDIP","Package_DIP:DIP-28_W15.24mm_Socket","~"
+J4 ,1,"Wireconnections","Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Horizontal","~"
+R1 ,1,"1k","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~"
+R2 ,1,"3k3","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~"
+R3 ,1,"560","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~"
+U1 ,1,"ATtiny85-20PU","Package_DIP:DIP-8_W7.62mm","http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf"

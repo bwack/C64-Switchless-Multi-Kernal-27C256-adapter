@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "C64 Switchless Quad Kernal Switcher (SKS64)"
-Date "2019-07-13"
+Date "2019-07-15"
 Rev "1.20"
 Comp "Bwack"
 Comment1 ""
@@ -296,7 +296,7 @@ L pspice:C C1
 U 1 1 5D340530
 P 5350 4050
 F 0 "C1" H 5528 4096 50  0000 L CNN
-F 1 "C" H 5528 4005 50  0000 L CNN
+F 1 "100nF" H 5528 4005 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 5350 4050 50  0001 C CNN
 F 3 "~" H 5350 4050 50  0001 C CNN
 	1    5350 4050
