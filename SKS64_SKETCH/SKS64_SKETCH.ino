@@ -29,6 +29,9 @@
 #include <avr/boot.h>
 #include <EEPROM.h>
 
+#define SHORTBOARDVERSION //uncomment for shortboard version
+#define RED_BLINK
+
 // I/O
 #define RED 1
 #define A13 4
@@ -61,6 +64,26 @@ void flash_led(int led, int times, int duration) {
     digitalWrite(led, LOW);
     delay(duration);
   }
+}
+
+void set_ledcolor(int _rom) {
+#ifdef SHORTBOARDVERSION
+  _rom--;
+  digitalWrite(A13, _rom&0x01);
+  digitalWrite(A14, _rom&0x02);
+  digitalWrite(RED, _rom&0x04);
+#else
+  if(_rom==0) {
+    digitalWrite(A13, LOW);
+    digitalWrite(A14, LOW);
+    digitalWrite(RED, HIGH);
+  } else {
+    digitalWrite(A13, _rom&0x01);
+    digitalWrite(A14, _rom&0x02);
+    digitalWrite(RED, LOW);
+  }
+#endif
+
 }
 
 void setup() {
@@ -121,7 +144,6 @@ void setup() {
   delay(500);
 
   rom = EEPROM.read(0) & 0x03;
-
   counter=0;
 }
 
@@ -130,12 +152,11 @@ void loop() {
   switch (state)
   {
     case STATE_IDLE:
-      digitalWrite(RED, LOW);
       if (restore==0)
         counter++;
       else
         counter=0;
-      if (counter>PRESSTIME) {
+      if (counter>PRESSTIME*2) {
         next_state = STATE_STILLHOLDING;
         counter=0;
       }
@@ -143,9 +164,9 @@ void loop() {
 
     case STATE_STILLHOLDING:
       if (restore==0) {
-        digitalWrite(RED, !digitalRead(RED));
+        if(flashcounter==0) flashcounter = 2;
         counter++;
-        if (counter>HOLDTIME) {
+        if (counter>HOLDTIME*2) {
           next_state = STATE_EXROMRESET;
           counter=0;
         }
@@ -157,19 +178,30 @@ void loop() {
       break;
       
     case STATE_MENU:
-      if(counter++>MENUTIMEOUT) {
+      if(counter++>MENUTIMEOUT*2) {
         counter=0;
         next_state = STATE_RESET;
       }
       else if (last_press==1 && restore==0) {
         rom++;
+#ifdef SHORTBOARDVERSION
+        if (rom>7) rom=1;
+        flashcounter = rom*2;
+#else
         if (rom>3) rom=0;
         flashcounter = (rom+1)*2;
+#endif
+#ifndef RED_BLINK
+        flashcounter=0;
+#endif
+
+        set_ledcolor(rom);
       }
       if (restore==0) counter=0;
       break;
 
     case STATE_RESET:
+      set_ledcolor(rom);
       next_state = STATE_IDLE;
       digitalWrite(INTRST, LOW);
       pinMode(INTRST, OUTPUT);
@@ -180,6 +212,7 @@ void loop() {
       break;
 
     case STATE_EXROMRESET:
+      set_ledcolor(rom);
       next_state = STATE_IDLE;
       digitalWrite(INTRST, LOW);
       pinMode(INTRST, OUTPUT);
@@ -203,17 +236,14 @@ void loop() {
       break;
 
   }
-  if (rom&0x01) digitalWrite(A13, HIGH);
-  else digitalWrite(A13, LOW);
-  if (rom&0x02) digitalWrite(A14, HIGH);
-  else digitalWrite(A14, LOW);
   last_press = restore;
   state = next_state;    
-  delay(100);
+  delay(50);
 
   // flash led ?
   if (flashcounter>0) {
     digitalWrite(RED, (flashcounter&0x01)==1);
     flashcounter--;
-  }
+  } else set_ledcolor(rom);
+
 }
