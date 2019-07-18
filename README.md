@@ -23,7 +23,7 @@ This PCB can be used as a 28 to 24 pin EPROM adapter. With the ATTINY45/85 it is
 Longboards (not 250469) and shortboards (250469) are sometimes found in both C64C and C64! You must open the machine to be 100% sure which motherboard you have. The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 Kernal Adaptor Switch shortboard](https://github.com/svenpetersen1965/C64-Kernal-Adaptor-Switch-short-board-). The old shortboard version is located at [DiscoHR's repository](https://github.com/discoHR/C64C-C128-multikernal-adapter). It is possible to use the original LED and cable assembly. This was an idea I found on [tebl's repository](https://github.com/tebl/C64-Kernal-Switcher).
 
 # Programming
-It can be programmed with ISP programmers or High-Voltage programmers. You can use an Arduino Uno as ISP. Base your firmware selection on longboard version, shortboard version and ROM layout. Note that EXROM-RESET is only possible when using High-Voltage programmres (like TL866). Please see the User Guide for more information.
+It can be programmed with ISP programmers or High-Voltage programmers. You can use an Arduino Uno as ISP. Base your firmware selection on longboard version, shortboard version and ROM layout. Note that EXROM-RESET is only possible when using High-Voltage programmers (like TL866). Please see the User Guide for more information.
 
 ![3D_front](User&#32;Guide/media/programming_isp.png)
 
@@ -45,7 +45,7 @@ You can solder 1x1mm pin headers into motherboard vias to wire up RESTORE, RESET
 - Github:   https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
 
 # Change log
-## long board version
+## longboard version
 - Rev 1.20 (2019-07-14):
   - Eagle -> KiCad.
   - PIC12F629 -> ATTINY45/85. Note: Pinout is different! Don't mix up PIC12F with ATTINY!
@@ -57,17 +57,17 @@ You can solder 1x1mm pin headers into motherboard vias to wire up RESTORE, RESET
   - Moved IC2 down to clear space for the socket in the c64.
   - Changes to the silk screen.
 - Rev 1.12 (2016-09-18):
-  - Increased padd and hole sizes.
+  - Increased pad and hole sizes.
   - Removed ground fill from top layer.
   - Added CERN OHL v1.2 License.
 - Rev 1.11 (2016-09-10):
   - RGB Led header following RGB led pinout (Blue-Green-GND-Red).
-  - Editted silkscreen.
+  - Edited silkscreen.
 - Rev 1.1  (2016-09-08):
   - sch+brd.
   - Swapped signals #RESTORE and RED_LED. GP3 is input only.
 
-## short board version
+## shortboard version
 - Rev 1.0 (2019-07-18)
   - Initial design
 
