@@ -16,7 +16,8 @@ Thumbs.db
 *.kicad_pcb-bak
 *.kicad_pcb-bak
 *.bak
-KiCad/gerber/*
+KiCad_shortboard/gerber/*
+KiCad_longboard/gerber/*
 *.zip
 *.o
 *.elf
