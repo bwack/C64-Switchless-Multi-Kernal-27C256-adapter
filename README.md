@@ -5,7 +5,7 @@ README.txt
 ![3D_front](User&#32;Guide/media/Board_overview.png)
 
 C64 Switchless Multi Kernel Switch
-- 27C256 rom adapter for C64's with long motherboard
+- 27C256/512 rom adapter for C64's
 
 Designed by BWACK.
 CERN OPEN HARDWARE LICENSE v1.2
@@ -16,8 +16,7 @@ https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
 
 All text above must be included in any redistribution
 
-# C64 Switchless Quad Kernal Switcher
-(C64 longboard version)
+# C64 Switchless (Quad) Kernal Switcher
 
 This PCB can be used as a 28 to 24 pin EPROM adapter. With the ATTINY45/85 it is transformed into a kernal switcher. You can program it using Arduino to switch between four C64 kernals.
 
