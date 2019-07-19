@@ -23,9 +23,15 @@ This PCB can be used as a 28 to 24 pin EPROM adapter. With the ATTINY45/85 it is
 Longboards (not 250469) and shortboards (250469) are sometimes found in both C64C and C64! You must open the machine to be 100% sure which motherboard you have. The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 Kernal Adaptor Switch shortboard](https://github.com/svenpetersen1965/C64-Kernal-Adaptor-Switch-short-board-). The old shortboard version is located at [DiscoHR's repository](https://github.com/discoHR/C64C-C128-multikernal-adapter). It is possible to use the original LED and cable assembly. This was an idea I found on [tebl's repository](https://github.com/tebl/C64-Kernal-Switcher).
 
 # Programming
-It can be programmed with ISP programmers or High-Voltage programmers. You can use an Arduino Uno as ISP. Base your firmware selection on longboard version, shortboard version and ROM layout. Note that EXROM-RESET is only possible when using High-Voltage programmers (like TL866). Please see the User Guide for more information.
+Programming is done with ISP programmers or High-Voltage programmers. You can use an Arduino Uno as ISP. Please see the User Guide for more information.
 
 ![3D_front](User&#32;Guide/media/programming_isp.png)
+
+There is one single firmware for shortboard/longboard and 4/8 banks. These settings are stored in the EEPROM, and can be changed by holding RESTORE for 5s at power-on to enter the setup menu.
+
+# EXROM reset
+Some machine language programs change the way computer returns after a reset. In that case the only way to reset to basic is to turn the machine off. By controlling both RESET and EXROM it is possible to "cold start" the machine. Note: EXROM reset is only available when the ATtiny's RESET pin is disabled (fuse bit #RSTDISBL). This can only be done with HV-programmers (like TL866).
+
 
 # ROM layout
 ROM images are placed in 8k banks. In the longboard version place four kernals in a 32k image. In the shortboard version with ROM 27C256 place the basic image followed by 3 kernal images, or if ROM 27C512 is used place the basic image followed by 7 kernal images.
