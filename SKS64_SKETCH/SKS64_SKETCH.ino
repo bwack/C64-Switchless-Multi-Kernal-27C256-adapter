@@ -1,5 +1,6 @@
  /*
- * C64 Switchsless Quad Kernal Switcher
+ * SKS64 Firmware 0.1
+ * C64 Switchless Kernal Switcher
  * Firmware for PCB V1.20 and up.
  * 
  * EXROM:
@@ -17,20 +18,32 @@
  * fusebits and set the ATTiny to 1 MHz. This is an illnamed
  * function. On the ATtiny there is no bootloader.
  * 
- * Usage:
+ *   Usage
+ * ==========
  *  Assuming IDLE:
  *  - Hold RESTORE for 5s to perform EXROM-RESET (soft-reset).
  *  - Hold RESTORE for 2s to enter menu.
  *    - Tap RESTORE to change banks.
  *    - Machine resets 2s after releasing RESTORE (hard-reset).
+ *    
+ *   Setup
+ * ===========
+ * Select C64 motherboard type and 4 or 8 banks.
+ *  - Turn on the computer while holding down the RESTORE key.
+ *  - Hold it until the RGB LED starts flashing white twice.
+ *  - Tap RESTORE to rotate setup
+ *  - Hold RESTORE for about 5s to store setup
+ *  
+ *  Setup blinkys:
+ *     1. LONG SHORT --> Longboard 4 banks
+ *     2. LONG LONG  --> Longboard 8 banks
+ *     3. SHORT SHORT --> Shortboard 4 banks
+ *     4. SHORT LONG  --> Shortboard 8 banks
  *
  */
 
 #include <avr/boot.h>
 #include <EEPROM.h>
-
-#define SHORTBOARDVERSION //uncomment for shortboard version
-#define RED_BLINK
 
 // I/O
 #define RED 1
@@ -39,23 +52,28 @@
 #define RESTORE 0
 #define INTRST 2
 #define EXROM 5
+#define BANKS_EEPROM_ADDRESS 1
+#define SHORTBOARD_EEPROM_ADDRESS 2
 
 int exrom_available; // available if fuse bitshighBits 7 is active (low)
 int eightmhz;
-int counter, restore, last_press, flashcounter;
-int rom=0;
+int counter, restore, last_press, flashcounter, flashdivision;
+int rom=0, banks, shortboard;
+uint16_t flashpattern;
 
 // state machine
+#define STATE_INIT 4
+#define STATE_SETUP 5
 #define STATE_IDLE 0          // Stay in IDLE until RESTORE is held for 0.1s * PRESSTIME.
 #define STATE_STILLHOLDING 1  // Continued holding RESTORE goto EXROMRESET, if released goto MENU.
 #define STATE_MENU 2          // Single tap resets timeout and changes bank. Timeout goes to RESET.
 #define STATE_RESET 3         // Resets machine and go back to IDLE.
-#define STATE_EXROMRESET 4    // Resets machine with EXROM and go back to IDLE.
+#define STATE_EXROMRESET 7    // Resets machine with EXROM and go back to IDLE.
 #define PRESSTIME 20   // Presstime in 0.1s to enter menu
 #define HOLDTIME 30    // Press for PRESSTIME+HOLDTIME seconds to perform an EXROM-RESET
 #define MENUTIMEOUT 20 // Timeout since last press of the restore in menu mode.
-int state=STATE_IDLE;
-int next_state=STATE_IDLE;
+int state=STATE_INIT;
+int next_state=STATE_INIT;
 
 void flash_led(int led, int times, int duration) {
   for (int i=0; i<times; i++) {
@@ -67,23 +85,49 @@ void flash_led(int led, int times, int duration) {
 }
 
 void set_ledcolor(int _rom) {
-#ifdef SHORTBOARDVERSION
-  _rom--;
-  digitalWrite(A13, _rom&0x01);
-  digitalWrite(A14, _rom&0x02);
-  digitalWrite(RED, _rom&0x04);
-#else
-  if(_rom==0) {
-    digitalWrite(A13, LOW);
-    digitalWrite(A14, LOW);
-    digitalWrite(RED, HIGH);
-  } else {
+  if (banks==8) {
+    // in 8 bank mode, RED is tied to A15 and must be set by rom value
     digitalWrite(A13, _rom&0x01);
     digitalWrite(A14, _rom&0x02);
-    digitalWrite(RED, LOW);
+    digitalWrite(RED, _rom&0x04);
   }
-#endif
+  else if (banks==4) {
+    // in 4 bank mode, RED is not tied to A15 and can be used freely
+    if(_rom==0) {
+      digitalWrite(A13, LOW);
+      digitalWrite(A14, LOW);
+      digitalWrite(RED, HIGH);
+    } else {
+      digitalWrite(A13, _rom&0x01);
+      digitalWrite(A14, _rom&0x02);
+      #ifdef REDONLY
+      digitalWrite(RED, HIGH);
+      #else
+      digitalWrite(RED, LOW);
+      #endif
+    }
+  }
+}
 
+void rotate_setup() {
+  if      ( shortboard==0 && banks==4 ) { shortboard=0; banks=8; }
+  else if ( shortboard==0 && banks==8 ) { shortboard=1; banks=4; }
+  else if ( shortboard==1 && banks==4 ) { shortboard=1; banks=8; }
+  else if ( shortboard==1 && banks==8 ) { shortboard=0; banks=4; }
+}
+
+void save_setup() {
+  EEPROM.write(BANKS_EEPROM_ADDRESS, banks);
+  delay(5);
+  EEPROM.write(SHORTBOARD_EEPROM_ADDRESS, shortboard);
+  delay(5);
+}
+
+void set_blinky_pattern() {
+  if      ( shortboard==0 && banks==4 ) { flashpattern=0x9C00; }
+  else if ( shortboard==0 && banks==8 ) { flashpattern=0xE700; }
+  else if ( shortboard==1 && banks==4 ) { flashpattern=0x9000; }
+  else if ( shortboard==1 && banks==8 ) { flashpattern=0xE400; }
 }
 
 void setup() {
@@ -130,8 +174,8 @@ void setup() {
 
 // software trap for forgotten to burn fusebits
   while(eightmhz) {
-    flash_led(A13,1,2000);
-    flash_led(A13,2,800);
+    flash_led(RED,1,2000);
+    flash_led(RED,2,800);
     delay(4000);
   }
 
@@ -143,7 +187,14 @@ void setup() {
     flash_led(A13,1,200);
   delay(500);
 
-  rom = EEPROM.read(0) & 0x03;
+  banks = EEPROM.read(BANKS_EEPROM_ADDRESS);
+  if (banks==255) banks=4;
+  shortboard = EEPROM.read(SHORTBOARD_EEPROM_ADDRESS);
+  if(shortboard==255) shortboard=0;
+  rom = EEPROM.read(0);
+  if (banks==8) rom = rom&0x07;
+  else if (banks==4) rom = rom&0x03;
+
   counter=0;
 }
 
@@ -151,11 +202,39 @@ void loop() {
   restore = digitalRead(RESTORE);
   switch (state)
   {
-    case STATE_IDLE:
-      if (restore==0)
-        counter++;
-      else
+    case STATE_INIT:
+    if (restore==0) { 
+      counter++;
+      if(counter>50*2) {
         counter=0;
+        next_state = STATE_SETUP;
+        set_blinky_pattern();
+        digitalWrite(RED, HIGH);
+      }
+    } else {
+      next_state = STATE_IDLE;
+      counter=0;
+    }
+    break;
+
+    case STATE_SETUP:
+      if (restore==0) counter++;
+      else counter=0;
+      if(counter++>50*2) {
+        counter=0;
+        save_setup();
+        next_state = STATE_IDLE;
+      }
+      else if (last_press==0 && restore==1) {
+        rotate_setup();
+        set_blinky_pattern();
+      }
+      if (flashpattern==0) set_blinky_pattern();
+    break;
+
+    case STATE_IDLE:
+      if (restore==0) counter++;
+      else counter=0;
       if (counter>PRESSTIME*2) {
         next_state = STATE_STILLHOLDING;
         counter=0;
@@ -176,7 +255,7 @@ void loop() {
         last_press=0;
       }
       break;
-      
+
     case STATE_MENU:
       if(counter++>MENUTIMEOUT*2) {
         counter=0;
@@ -184,17 +263,17 @@ void loop() {
       }
       else if (last_press==1 && restore==0) {
         rom++;
-#ifdef SHORTBOARDVERSION
-        if (rom>7) rom=1;
-        flashcounter = rom*2;
-#else
-        if (rom>3) rom=0;
-        flashcounter = (rom+1)*2;
-#endif
-#ifndef RED_BLINK
+        if (shortboard) {
+          if (rom>banks-1) rom=1;
+          flashcounter = rom*2;
+        } else {
+          if (rom>banks-1) rom=0;
+          flashcounter = (rom+1)*2;
+        }
+#ifndef REDONLY
         flashcounter=0;
 #endif
-
+ 
         set_ledcolor(rom);
       }
       if (restore==0) counter=0;
@@ -244,6 +323,16 @@ void loop() {
   if (flashcounter>0) {
     digitalWrite(RED, (flashcounter&0x01)==1);
     flashcounter--;
-  } else set_ledcolor(rom);
+  } else if (flashpattern>0) {
+    if(--flashdivision<=0) {
+      digitalWrite(RED, (flashpattern&0x01)==1);
+      digitalWrite(A13, (flashpattern&0x01)==1);
+      digitalWrite(A14, (flashpattern&0x01)==1);
+      flashpattern = flashpattern >> 1;
+      flashdivision=2;
+    }
+  } else 
+    set_ledcolor(rom);
+
 
 }
