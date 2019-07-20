@@ -1,5 +1,5 @@
  /*
- * SKS64 Firmware 0.1
+ * SKS64 Firmware 0.2
  * C64 Switchless Kernal Switcher
  * Firmware for PCB V1.20 and up.
  * 
@@ -57,7 +57,7 @@
 
 int exrom_available; // available if fuse bitshighBits 7 is active (low)
 int eightmhz;
-int counter, restore, last_press, flashcounter, flashdivision;
+int counter, restore, last_press, flashcounter, flashdivision, inhibit;
 int rom=0, banks, shortboard;
 uint16_t flashpattern;
 
@@ -210,6 +210,7 @@ void loop() {
         next_state = STATE_SETUP;
         set_blinky_pattern();
         digitalWrite(RED, HIGH);
+        inhibit=1;
       }
     } else {
       next_state = STATE_IDLE;
@@ -226,7 +227,8 @@ void loop() {
         next_state = STATE_IDLE;
       }
       else if (last_press==0 && restore==1) {
-        rotate_setup();
+        if(!inhibit) rotate_setup();
+        inhibit=0;
         set_blinky_pattern();
       }
       if (flashpattern==0) set_blinky_pattern();
