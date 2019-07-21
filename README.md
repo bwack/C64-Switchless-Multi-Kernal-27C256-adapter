@@ -32,7 +32,6 @@ There is one single firmware for shortboard/longboard and 4/8 banks. These setti
 # EXROM reset
 Some machine language programs change the way computer returns after a reset. In that case the only way to reset to basic is to turn the machine off. By controlling both RESET and EXROM it is possible to "cold start" the machine. Note: EXROM reset is only available when the ATtiny's RESET pin is disabled (fuse bit #RSTDISBL). This can only be done with HV-programmers (like TL866).
 
-
 # ROM layout
 ROM images are placed in 8k banks. In the longboard version place four kernals in a 32k image. In the shortboard version with ROM 27C256 place the basic image followed by 3 kernal images, or if ROM 27C512 is used place the basic image followed by 7 kernal images.
 
@@ -43,6 +42,7 @@ You can solder 1x1mm pin headers into motherboard vias to wire up RESTORE, RESET
 ![3D_front](User&#32;Guide/media/wiring_250407.png)
 ![3D_front](User&#32;Guide/media/wiring_250425.png)
 ![3D_front](User&#32;Guide/media/wiring_250466.png)
+![3D_front](User&#32;Guide/media/wiring_250469.png)
 
 # Project links
 - lemon64:  http://www.lemon64.com/forum/viewtopic.php?p=747333
