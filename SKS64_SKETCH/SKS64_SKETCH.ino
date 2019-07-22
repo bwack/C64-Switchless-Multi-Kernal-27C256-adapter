@@ -1,5 +1,5 @@
  /*
- * SKS64 Firmware 0.2
+ * SKS64 Firmware 1.0
  * C64 Switchless Kernal Switcher
  * Firmware for PCB V1.20 and up.
  * 
@@ -43,7 +43,11 @@
  */
 
 #include <avr/boot.h>
+#include <avr/sleep.h>
 #include <EEPROM.h>
+
+#define USE_SLEEPMODE
+//#define REDONLY
 
 // I/O
 #define RED 1
@@ -52,6 +56,7 @@
 #define RESTORE 0
 #define INTRST 2
 #define EXROM 5
+
 #define BANKS_EEPROM_ADDRESS 1
 #define SHORTBOARD_EEPROM_ADDRESS 2
 
@@ -74,6 +79,23 @@ uint16_t flashpattern;
 #define MENUTIMEOUT 20 // Timeout since last press of the restore in menu mode.
 int state=STATE_INIT;
 int next_state=STATE_INIT;
+
+void system_sleep() {
+  GIMSK |= _BV(PCIE); // pin change interrupt enable
+  PCMSK |= _BV(PCINT0); // pin change interrupt on pin 0
+  ADCSRA &= ~_BV(ADEN); // ADC off
+  set_sleep_mode(SLEEP_MODE_PWR_DOWN); // sleep mode is set here
+
+  sleep_enable();
+  sei();
+  sleep_cpu();
+
+  cli();
+  PCMSK &= ~_BV(PCINT0);
+  sleep_disable();
+  ADCSRA |= _BV(ADEN);
+  sei();
+}
 
 void flash_led(int led, int times, int duration) {
   for (int i=0; i<times; i++) {
@@ -180,12 +202,10 @@ void setup() {
   }
 
 // poweron indicate EXROM availability
-  delay(500);
   if(exrom_available)
-    flash_led(A13,2,100);
+    flash_led(A13,2,50);
   else
-    flash_led(A13,1,200);
-  delay(500);
+    flash_led(A13,1,50);
 
   banks = EEPROM.read(BANKS_EEPROM_ADDRESS);
   if (banks==255) banks=4;
@@ -236,7 +256,12 @@ void loop() {
 
     case STATE_IDLE:
       if (restore==0) counter++;
-      else counter=0;
+      else { 
+        counter=0;
+        #ifdef USE_SLEEPMODE
+        system_sleep();
+        #endif
+      }
       if (counter>PRESSTIME*2) {
         next_state = STATE_STILLHOLDING;
         counter=0;
@@ -335,6 +360,8 @@ void loop() {
     }
   } else 
     set_ledcolor(rom);
-
-
 }
+
+ISR(PCINT0_vect) {
+}
+ 
