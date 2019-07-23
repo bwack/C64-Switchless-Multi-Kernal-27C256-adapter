@@ -52,6 +52,8 @@ You can solder 1x1mm pin headers into motherboard vias to wire up RESTORE, RESET
 
 # Change log
 ## longboard version
+- Rev 1.21 (2019-07-23):
+  - Support 27C512 and 8 banks
 - Rev 1.20 (2019-07-14):
   - Eagle -> KiCad.
   - PIC12F629 -> ATTINY45/85. Note: Pinout is different! Don't mix up PIC12F with ATTINY!

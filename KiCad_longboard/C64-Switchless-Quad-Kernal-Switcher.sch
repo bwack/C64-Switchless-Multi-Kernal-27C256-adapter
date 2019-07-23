@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "C64 Switchless Quad Kernal Switcher (SKS64)"
-Date "2019-07-15"
-Rev "1.20"
+Date "2019-07-23"
+Rev "1.21"
 Comp "Bwack"
 Comment1 ""
 Comment2 ""
@@ -65,7 +65,7 @@ L Connector_Generic:Conn_02x14_Counter_Clockwise J3
 U 1 1 5D2A3953
 P 1850 4900
 F 0 "J3" H 1900 5717 50  0000 C CNN
-F 1 "27C256_28PDIP" H 1900 5626 50  0000 C CNN
+F 1 "27C256/512_28PDIP" H 1700 5650 50  0000 C CNN
 F 2 "Package_DIP:DIP-28_W15.24mm_Socket" H 1850 4900 50  0001 C CNN
 F 3 "~" H 1850 4900 50  0001 C CNN
 	1    1850 4900
@@ -151,12 +151,6 @@ Wire Wire Line
 Wire Wire Line
 	2650 4300 2250 4300
 Wire Wire Line
-	1650 4300 1550 4300
-Wire Wire Line
-	1550 4300 1550 4000
-Wire Wire Line
-	1550 4000 2250 4000
-Wire Wire Line
 	2250 4000 2250 4300
 Connection ~ 2250 4300
 Wire Wire Line
@@ -172,7 +166,6 @@ F 3 "" H 2250 4000 50  0001 C CNN
 	1    2250 4000
 	1    0    0    -1  
 $EndComp
-Connection ~ 2250 4000
 Text Label 5600 5200 0    50   ~ 0
 A13
 Text Label 5600 5100 0    50   ~ 0
@@ -203,8 +196,6 @@ F 3 "" H 4900 4500 50  0001 C CNN
 $EndComp
 Text Label 5600 5000 0    50   ~ 0
 ~INTRST~
-Text Label 5600 4900 0    50   ~ 0
-RED_LED
 Text Label 5600 5300 0    50   ~ 0
 ~EXROM~
 $Comp
@@ -379,13 +370,13 @@ SCK
 Text Notes 9750 5800 0    50   ~ 0
 MOSI
 Wire Wire Line
-	5500 5100 7150 5100
+	5500 5100 6700 5100
 Wire Wire Line
-	5500 5200 7150 5200
+	5500 5200 6650 5200
 Wire Wire Line
 	5500 5300 6250 5300
 Wire Wire Line
-	7150 5300 6500 5300
+	7150 5300 6750 5300
 Wire Wire Line
 	6500 5300 6500 4900
 Wire Wire Line
@@ -403,4 +394,37 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microc
 $EndComp
 Text Notes 4100 4500 0    50   ~ 0
 or ATtiny45
+Text Label 1400 4300 0    50   ~ 0
+A15
+Text Label 5600 4900 0    50   ~ 0
+A15
+Wire Wire Line
+	2500 4400 2500 3500
+Wire Wire Line
+	2500 3500 6700 3500
+Wire Wire Line
+	6700 3500 6700 5100
+Connection ~ 6700 5100
+Wire Wire Line
+	6700 5100 7150 5100
+Wire Wire Line
+	2550 4500 2550 3550
+Wire Wire Line
+	2550 3550 6650 3550
+Wire Wire Line
+	6650 3550 6650 5200
+Connection ~ 6650 5200
+Wire Wire Line
+	6650 5200 7150 5200
+Wire Wire Line
+	1200 4300 1200 3450
+Wire Wire Line
+	1200 3450 6750 3450
+Wire Wire Line
+	6750 3450 6750 5300
+Wire Wire Line
+	1200 4300 1650 4300
+Connection ~ 6750 5300
+Wire Wire Line
+	6750 5300 6500 5300
 $EndSCHEMATC
