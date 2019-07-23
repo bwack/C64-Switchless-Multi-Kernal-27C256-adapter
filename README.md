@@ -16,11 +16,13 @@ https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
 
 All text above must be included in any redistribution
 
-# C64 Switchless (Quad) Kernal Switcher
+# C64 Switchless Kernal Switcher
 
 This PCB can be used as a 28 to 24 pin EPROM adapter. With the ATTINY45/85 it is transformed into a kernal switcher. The RESTORE key works as normal, and with longer presses it can be used to switch kernals, or reset the machine. If you would like to tailor the adaptors behaviour to your liking, you can program it using the Arduino IDE.
 
 Longboards (not 250469) and shortboards (250469) are sometimes found in both C64C and C64! You must open the machine to be 100% sure which motherboard you have. The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 Kernal Adaptor Switch shortboard](https://github.com/svenpetersen1965/C64-Kernal-Adaptor-Switch-short-board-). The old shortboard version is located at [DiscoHR's repository](https://github.com/discoHR/C64C-C128-multikernal-adapter). It is possible to use the original LED and cable assembly. This was an idea I found on [tebl's repository](https://github.com/tebl/C64-Kernal-Switcher).
+
+Gerbers and hex-files (for programming) are found under the release-tab above.
 
 # Programming
 Programming is done with ISP programmers or High-Voltage programmers. You can use an Arduino Uno as ISP. Please see the User Guide for more information.
