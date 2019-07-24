@@ -1,5 +1,5 @@
  /*
- * SKS64 Firmware 1.0
+ * SKS64 Firmware 1.1
  * C64 Switchless Kernal Switcher
  * Firmware for PCB V1.20 and up.
  * 
@@ -40,6 +40,8 @@
  *     3. SHORT SHORT --> Shortboard 4 banks
  *     4. SHORT LONG  --> Shortboard 8 banks
  *
+ * History:
+ * - 1.1 fixed: red led turned on when EXROM reset (flashcounter not zero)
  */
 
 #include <avr/boot.h>
@@ -259,7 +261,7 @@ void loop() {
       else { 
         counter=0;
         #ifdef USE_SLEEPMODE
-        system_sleep();
+        if (flashcounter==0) system_sleep();
         #endif
       }
       if (counter>PRESSTIME*2) {
@@ -307,6 +309,7 @@ void loop() {
       break;
 
     case STATE_RESET:
+      flashcounter=0;
       set_ledcolor(rom);
       next_state = STATE_IDLE;
       digitalWrite(INTRST, LOW);
@@ -318,6 +321,7 @@ void loop() {
       break;
 
     case STATE_EXROMRESET:
+      flashcounter=0;
       set_ledcolor(rom);
       next_state = STATE_IDLE;
       digitalWrite(INTRST, LOW);
@@ -343,8 +347,7 @@ void loop() {
 
   }
   last_press = restore;
-  state = next_state;    
-  delay(50);
+  state = next_state;
 
   // flash led ?
   if (flashcounter>0) {
@@ -360,6 +363,7 @@ void loop() {
     }
   } else 
     set_ledcolor(rom);
+  delay(50);
 }
 
 ISR(PCINT0_vect) {
