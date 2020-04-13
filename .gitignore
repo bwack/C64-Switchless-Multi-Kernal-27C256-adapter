@@ -21,7 +21,6 @@ KiCad_longboard/gerber/*
 *.zip
 *.o
 *.elf
-*.hex
 *.lss
 *.map
 .DS_Store
