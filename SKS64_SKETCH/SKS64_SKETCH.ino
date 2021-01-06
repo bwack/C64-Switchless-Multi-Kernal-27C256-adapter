@@ -174,7 +174,7 @@ void setup() {
   digitalWrite(A14, LOW);
   digitalWrite(INTRST, HIGH);
   if(exrom_available) {
-    pinMode(EXROM, OUTPUT);
+    pinMode(EXROM, INPUT);
     digitalWrite(EXROM, HIGH);
   }
 
