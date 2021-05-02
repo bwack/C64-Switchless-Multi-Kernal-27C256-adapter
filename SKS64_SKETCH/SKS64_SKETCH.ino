@@ -1,5 +1,5 @@
  /*
- * SKS64 Firmware 1.1
+ * SKS64 Firmware 1.2
  * C64 Switchless Kernal Switcher
  * Firmware for PCB V1.20 and up.
  * 
@@ -42,6 +42,7 @@
  *
  * History:
  * - 1.1 fixed: red led turned on when EXROM reset (flashcounter not zero)
+ * - 1.2 fixed: Set EXROM to input on startup instead of output - otherwise EXROM is held high until first reboot. Thanks Darylrichards!
  */
 
 #include <avr/boot.h>
