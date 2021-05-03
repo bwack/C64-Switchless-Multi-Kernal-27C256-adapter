@@ -43,6 +43,7 @@
  * History:
  * - 1.1 fixed: red led turned on when EXROM reset (flashcounter not zero)
  * - 1.2 fixed: Set EXROM to input on startup instead of output - otherwise EXROM is held high until first reboot. Thanks Darylrichards!
+ * - 1.3 fixed: Removed led flashes at start of program. The delay caused the C64C to not warm start.
  */
 
 #include <avr/boot.h>
@@ -205,10 +206,10 @@ void setup() {
   }
 
 // poweron indicate EXROM availability
-  if(exrom_available)
-    flash_led(A13,2,50);
-  else
-    flash_led(A13,1,50);
+//  if(exrom_available)
+//    flash_led(A13,2,50);
+//  else
+//    flash_led(A13,1,50);
 
   banks = EEPROM.read(BANKS_EEPROM_ADDRESS);
   if (banks==255) banks=4;
