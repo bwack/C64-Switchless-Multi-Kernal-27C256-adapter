@@ -1,5 +1,5 @@
  /*
- * SKS64 Firmware 1.2
+ * SKS64 Firmware 1.4
  * C64 Switchless Kernal Switcher
  * Firmware for PCB V1.20 and up.
  * 
@@ -44,6 +44,7 @@
  * - 1.1 fixed: red led turned on when EXROM reset (flashcounter not zero)
  * - 1.2 fixed: Set EXROM to input on startup instead of output - otherwise EXROM is held high until first reboot. Thanks Darylrichards!
  * - 1.3 fixed: Removed led flashes at start of program. The delay caused the C64C to not warm start.
+ * - 1.4 fixed: A15 always 0 at cold boot in 8 banks longboard mode.
  */
 
 #include <avr/boot.h>
@@ -287,7 +288,7 @@ void loop() {
       }
       break;
 
-    case STATE_MENU:
+     case STATE_MENU:
       if(counter++>MENUTIMEOUT*2) {
         counter=0;
         next_state = STATE_RESET;
@@ -318,7 +319,7 @@ void loop() {
       pinMode(INTRST, OUTPUT);
       delay(300);
       pinMode(INTRST, INPUT);
-      EEPROM.write(0, rom&0x03);
+      EEPROM.write(0, rom&0x07);
       delay(5);
       break;
 
