@@ -1,5 +1,5 @@
  /*
- * SKS64 Firmware 1.5
+ * SKS64 Firmware 1.6
  * C64 Switchless Kernal Switcher
  * 
  * EXROM:
@@ -46,6 +46,8 @@
  * - 1.3 fixed: Removed led flashes at start of program. The delay caused the C64C to not warm start.
  * - 1.4 fixed: A15 always 0 at cold boot in 8 banks longboard mode.
  * - 1.5 new: 1541 mode (2*16k banks). Goes to upper bank when the C64 is in bank1 (jiffydos), and lower bank elsewise.
+ * - 1.5 new: 1541 mode (2*16k banks). Goes to upper bank when the C64 is in bank1 (jiffydos), and lower bank elsewise.
+ * - 1.6 removed startup delay (1s) causing startup issues.
  */
 
 #include <avr/boot.h>
@@ -254,7 +256,6 @@ void setup() {
   }
   //ss.attachInterrupt( handleRxChar );
   ss.begin( 19200 );
-  delay(1000);
 
 /*
  * show fuse bits on the red led by flashing for each digit
