@@ -1,7 +1,6 @@
  /*
- * SKS64 Firmware 1.4
+ * SKS64 Firmware 1.5
  * C64 Switchless Kernal Switcher
- * Firmware for PCB V1.20 and up.
  * 
  * EXROM:
  * The firmware determines if EXROM reset is possible by
@@ -12,7 +11,7 @@
  * Programming:
  * - Board: ATtiny25/45/85
  * - Processor: ATtiny85
- * - Clock: Internal 1 MHz
+ * - Clock: Internal 8 MHz
  * 
  * Select "Burn Bootloader". This function will write the
  * fusebits and set the ATTiny to 1 MHz. This is an illnamed
@@ -35,23 +34,26 @@
  *  - Hold RESTORE for about 5s to store setup
  *  
  *  Setup blinkys:
- *     1. LONG SHORT --> Longboard 4 banks
- *     2. LONG LONG  --> Longboard 8 banks
+ *     1. LONG SHORT  --> Longboard 4 banks
+ *     2. LONG LONG   --> Longboard 8 banks
  *     3. SHORT SHORT --> Shortboard 4 banks
  *     4. SHORT LONG  --> Shortboard 8 banks
+ *     5. LOOONG      --> 1541C/1541-II 2 banks
  *
  * History:
  * - 1.1 fixed: red led turned on when EXROM reset (flashcounter not zero)
  * - 1.2 fixed: Set EXROM to input on startup instead of output - otherwise EXROM is held high until first reboot. Thanks Darylrichards!
  * - 1.3 fixed: Removed led flashes at start of program. The delay caused the C64C to not warm start.
  * - 1.4 fixed: A15 always 0 at cold boot in 8 banks longboard mode.
+ * - 1.5 new: 1541 mode (2*16k banks). Goes to upper bank when the C64 is in bank1 (jiffydos), and lower bank elsewise.
  */
 
 #include <avr/boot.h>
 #include <avr/sleep.h>
+#include "NeoSWSerial.h"
 #include <EEPROM.h>
 
-#define USE_SLEEPMODE
+//#define USE_SLEEPMODE
 //#define REDONLY
 
 // I/O
@@ -62,13 +64,12 @@
 #define INTRST 2
 #define EXROM 5
 
-#define BANKS_EEPROM_ADDRESS 1
-#define SHORTBOARD_EEPROM_ADDRESS 2
+#define EEPROM_ADDRESS_MODE 1
 
 int exrom_available; // available if fuse bitshighBits 7 is active (low)
 int eightmhz;
-int counter, restore, last_press, flashcounter, flashdivision, inhibit;
-int rom=0, banks, shortboard;
+int counter=0, restore=1, last_press, flashcounter=0, flashdivision, inhibit;
+int rom=0, mode=0;
 uint16_t flashpattern;
 
 // state machine
@@ -84,6 +85,25 @@ uint16_t flashpattern;
 #define MENUTIMEOUT 20 // Timeout since last press of the restore in menu mode.
 int state=STATE_INIT;
 int next_state=STATE_INIT;
+
+NeoSWSerial ss( INTRST, INTRST );
+
+volatile uint32_t newlines = 0UL;
+
+static void handleRxChar( uint8_t c )
+{
+  if (c == '\n')
+  newlines++;
+}
+
+enum {
+  LONGBOARD_4BANKS = 0,
+  LONGBOARD_8BANKS,
+  SHORTBOARD_3BANKS,
+  SHORTBOARD_7BANKS,
+  C1541C_1541II,
+  MAX_MODES
+};
 
 void system_sleep() {
   GIMSK |= _BV(PCIE); // pin change interrupt enable
@@ -112,14 +132,27 @@ void flash_led(int led, int times, int duration) {
 }
 
 void set_ledcolor(int _rom) {
-  if (banks==8) {
-    // in 8 bank mode, RED is tied to A15 and must be set by rom value
+  if (mode==C1541C_1541II) {
+    if (_rom == 1) {
+      digitalWrite(A13, LOW);
+      digitalWrite(A14, HIGH);
+      digitalWrite(RED, LOW);
+    } else {
+      digitalWrite(A13, HIGH);
+      digitalWrite(A14, LOW);
+      digitalWrite(RED, LOW);
+    }
+  }
+  else if (mode==LONGBOARD_8BANKS || mode==SHORTBOARD_7BANKS) {
+    // RED is tied to A15 and must be set by rom value
     digitalWrite(A13, _rom&0x01);
     digitalWrite(A14, _rom&0x02);
     digitalWrite(RED, _rom&0x04);
   }
-  else if (banks==4) {
+  else if (mode==LONGBOARD_4BANKS || mode==SHORTBOARD_3BANKS) {
     // in 4 bank mode, RED is not tied to A15 and can be used freely
+    // In 4 bank mode you are supposed to use *256 ROMS or weird stuff happens.
+    // but it is possible to use a *512, just remember to put bank0 at bank4.
     if(_rom==0) {
       digitalWrite(A13, LOW);
       digitalWrite(A14, LOW);
@@ -137,33 +170,72 @@ void set_ledcolor(int _rom) {
 }
 
 void rotate_setup() {
-  if      ( shortboard==0 && banks==4 ) { shortboard=0; banks=8; }
-  else if ( shortboard==0 && banks==8 ) { shortboard=1; banks=4; }
-  else if ( shortboard==1 && banks==4 ) { shortboard=1; banks=8; }
-  else if ( shortboard==1 && banks==8 ) { shortboard=0; banks=4; }
+  mode++;
+  if (mode>=MAX_MODES) mode=0;
+}
+
+void rotate_rom() {
+  rom++;
+  int highestbank=0, startat=0;
+  switch (mode) {
+    case LONGBOARD_8BANKS:
+      highestbank=7;
+      startat=0;
+      break;
+    case LONGBOARD_4BANKS:
+      highestbank=3;
+      startat=0;
+      break;
+    case SHORTBOARD_7BANKS:
+      highestbank=7;
+      startat=1;
+      break;
+    case SHORTBOARD_3BANKS:
+      highestbank=3;
+      startat=1; // because 0 is BASIC
+      break;
+    case C1541C_1541II:
+      highestbank=1;
+      startat=0;
+      break;
+  }
+
+  if (rom>highestbank)
+    rom = startat;
+
+  flashcounter = rom*2;
+  if (mode==LONGBOARD_8BANKS||mode==LONGBOARD_4BANKS) {
+    flashcounter = (rom+1)*2;
+  }
+}
+
+void load_setup() {
+  mode = EEPROM.read(EEPROM_ADDRESS_MODE);
+  if (mode>=MAX_MODES) mode=0;
+  rom = EEPROM.read(0);
+  rom = rom&0x07;
 }
 
 void save_setup() {
-  EEPROM.write(BANKS_EEPROM_ADDRESS, banks);
-  delay(5);
-  EEPROM.write(SHORTBOARD_EEPROM_ADDRESS, shortboard);
+  EEPROM.write(EEPROM_ADDRESS_MODE, mode);
   delay(5);
 }
 
 void set_blinky_pattern() {
-  if      ( shortboard==0 && banks==4 ) { flashpattern=0x9C00; }
-  else if ( shortboard==0 && banks==8 ) { flashpattern=0xE700; }
-  else if ( shortboard==1 && banks==4 ) { flashpattern=0x9000; }
-  else if ( shortboard==1 && banks==8 ) { flashpattern=0xE400; }
+  if      ( mode==LONGBOARD_4BANKS )  { flashpattern=0x9C00; }
+  else if ( mode==LONGBOARD_8BANKS )  { flashpattern=0xE700; }
+  else if ( mode==SHORTBOARD_3BANKS ) { flashpattern=0x9000; }
+  else if ( mode==SHORTBOARD_7BANKS ) { flashpattern=0xE400; }
+  else if ( mode==C1541C_1541II )     { flashpattern=0xF7FF; }
+  else { flashpattern=0x1000; }
 }
 
 void setup() {
-  cli();
   uint8_t lowBits      = boot_lock_fuse_bits_get(GET_LOW_FUSE_BITS);
   uint8_t highBits     = boot_lock_fuse_bits_get(GET_HIGH_FUSE_BITS);
   //uint8_t extendedBits = boot_lock_fuse_bits_get(GET_EXTENDED_FUSE_BITS);
   //uint8_t lockBits     = boot_lock_fuse_bits_get(GET_LOCK_BITS);
-  sei();
+  //sei();
   exrom_available = ~highBits&0x80;
   eightmhz = lowBits&0x80;
   
@@ -175,11 +247,14 @@ void setup() {
   digitalWrite(RED, LOW);
   digitalWrite(A13, LOW);
   digitalWrite(A14, LOW);
-  digitalWrite(INTRST, HIGH);
+                                                                                                                                                                                                                                                                                                                                                                                digitalWrite(INTRST, HIGH);
   if(exrom_available) {
     pinMode(EXROM, INPUT);
     digitalWrite(EXROM, HIGH);
   }
+  //ss.attachInterrupt( handleRxChar );
+  ss.begin( 19200 );
+  delay(1000);
 
 /*
  * show fuse bits on the red led by flashing for each digit
@@ -200,7 +275,7 @@ void setup() {
 */
 
 // software trap for forgotten to burn fusebits
-  while(eightmhz) {
+  while(!eightmhz) {
     flash_led(RED,1,2000);
     flash_led(RED,2,800);
     delay(4000);
@@ -212,13 +287,7 @@ void setup() {
 //  else
 //    flash_led(A13,1,50);
 
-  banks = EEPROM.read(BANKS_EEPROM_ADDRESS);
-  if (banks==255) banks=4;
-  shortboard = EEPROM.read(SHORTBOARD_EEPROM_ADDRESS);
-  if(shortboard==255) shortboard=0;
-  rom = EEPROM.read(0);
-  if (banks==8) rom = rom&0x07;
-  else if (banks==4) rom = rom&0x03;
+  load_setup();
 
   counter=0;
 }
@@ -294,14 +363,8 @@ void loop() {
         next_state = STATE_RESET;
       }
       else if (last_press==1 && restore==0) {
-        rom++;
-        if (shortboard) {
-          if (rom>banks-1) rom=1;
-          flashcounter = rom*2;
-        } else {
-          if (rom>banks-1) rom=0;
-          flashcounter = (rom+1)*2;
-        }
+        rotate_rom();
+
 #ifndef REDONLY
         flashcounter=0;
 #endif
@@ -315,10 +378,14 @@ void loop() {
       flashcounter=0;
       set_ledcolor(rom);
       next_state = STATE_IDLE;
-      digitalWrite(INTRST, LOW);
+      ss.ignore();
+      ss.write(0xde);
+      ss.write(rom);
       pinMode(INTRST, OUTPUT);
+      digitalWrite(INTRST, LOW);
       delay(300);
       pinMode(INTRST, INPUT);
+      ss.listen();
       EEPROM.write(0, rom&0x07);
       delay(5);
       break;
@@ -341,7 +408,7 @@ void loop() {
       if(exrom_available) {
         pinMode(EXROM, INPUT);
         digitalWrite(EXROM, HIGH);
-
+        EEPROM.write(0, rom&0x07);
       }
       delay(300);
 
@@ -351,6 +418,18 @@ void loop() {
   }
   last_press = restore;
   state = next_state;
+
+  while (ss.available()) {
+    uint8_t data = ss.read();
+    if (data==0xde) {
+      delay(1);
+      if (ss.available()) {
+        rom=(ss.read());
+        flashcounter=0;
+        set_ledcolor(rom);
+      }
+    }
+  }
 
   // flash led ?
   if (flashcounter>0) {
@@ -368,7 +447,3 @@ void loop() {
     set_ledcolor(rom);
   delay(50);
 }
-
-ISR(PCINT0_vect) {
-}
- 

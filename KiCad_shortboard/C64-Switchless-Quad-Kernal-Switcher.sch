@@ -1,18 +1,17 @@
 EESchema Schematic File Version 4
-LIBS:C64-Switchless-Quad-Kernal-Switcher-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "C64 Switchless Quad Kernal Switcher - shortboard"
-Date "2019-07-18"
-Rev "1.0"
+Date "2021-08-10"
+Rev "1.1"
 Comp "Bwack"
-Comment1 "C64 Short motherboard version"
-Comment2 "must include basic image at first 8k bank"
-Comment3 "Ideas from Sven Petersen's switcher"
-Comment4 ""
+Comment1 "C64 Short motherboard version. 28-28pin board."
+Comment2 "Ideas from Sven Petersen's switcher."
+Comment3 "C64 shortboard: Add U2, and include BASIC image at bank0 in a *256 or *512 ROM."
+Comment4 "1541C/1541-II mode: Do not add U2. Add solder to JP1, JP2 and JP4. Use *256 ROM."
 $EndDescr
 $Comp
 L Connector_Generic:Conn_02x14_Counter_Clockwise J3
@@ -34,12 +33,12 @@ top
 $Comp
 L power:VCC #PWR0102
 U 1 1 5D2C04ED
-P 9850 3500
-F 0 "#PWR0102" H 9850 3350 50  0001 C CNN
-F 1 "VCC" H 9867 3673 50  0000 C CNN
-F 2 "" H 9850 3500 50  0001 C CNN
-F 3 "" H 9850 3500 50  0001 C CNN
-	1    9850 3500
+P 10500 3500
+F 0 "#PWR0102" H 10500 3350 50  0001 C CNN
+F 1 "VCC" H 10517 3673 50  0000 C CNN
+F 2 "" H 10500 3500 50  0001 C CNN
+F 3 "" H 10500 3500 50  0001 C CNN
+	1    10500 3500
 	1    0    0    -1  
 $EndComp
 Text Label 6000 5650 0    50   ~ 0
@@ -242,7 +241,7 @@ Wire Wire Line
 Wire Wire Line
 	5900 5350 6750 5350
 $Comp
-L MCU_Microchip_ATtiny:ATtiny85-20PU U1
+L C64-Switchless-Quad-Kernal-Switcher-rescue:ATtiny85-20PU-MCU_Microchip_ATtiny U1
 U 1 1 5D2A0255
 P 5300 5550
 F 0 "U1" H 4900 6100 50  0000 R CNN
@@ -276,8 +275,6 @@ F 3 "~" H 8450 4200 50  0001 C CNN
 	1    8450 4200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9750 3600 9850 3600
 Wire Wire Line
 	9750 3900 10600 3900
 Wire Wire Line
@@ -339,11 +336,6 @@ Connection ~ 8750 4900
 Wire Wire Line
 	8750 4900 9250 4900
 Wire Wire Line
-	9850 3600 9850 3500
-Connection ~ 9850 3600
-Wire Wire Line
-	9850 3600 10500 3600
-Wire Wire Line
 	8750 5050 8750 4900
 Wire Wire Line
 	9250 4500 8650 4500
@@ -379,7 +371,7 @@ Text Label 9000 3800 0    50   ~ 0
 A7
 NoConn ~ 8650 3600
 Wire Wire Line
-	9250 3600 9200 3600
+	9250 3600 8800 3600
 Wire Wire Line
 	9250 3700 8650 3700
 Text Label 9000 3700 0    50   ~ 0
@@ -420,18 +412,16 @@ Connection ~ 10500 3600
 Wire Wire Line
 	10500 3600 10600 3600
 Wire Wire Line
-	9750 3700 9950 3700
-Wire Wire Line
 	10350 3800 10600 3800
-Text Label 10350 3250 1    50   ~ 0
+Text Label 10600 3050 1    50   ~ 0
 ~BASIC~_KERNAL
 Text Notes 10450 3800 0    50   ~ 0
 A13
-Text Label 9200 3200 1    50   ~ 0
+Text Label 8800 3450 1    50   ~ 0
 A15
-Text Label 9600 3200 1    50   ~ 0
+Text Label 9850 3450 1    50   ~ 0
 A14
-Text Label 10000 3200 1    50   ~ 0
+Text Label 10000 3450 1    50   ~ 0
 A13
 $Comp
 L 74xx:74LS08 U2
@@ -447,23 +437,12 @@ $EndComp
 $Comp
 L 74xx:74LS08 U2
 U 2 1 5D40257B
-P 9600 2750
-F 0 "U2" H 9600 2800 50  0000 C CNN
-F 1 "74LS08" H 9600 2700 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9600 2750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9600 2750 50  0001 C CNN
-	2    9600 2750
-	0    -1   1    0   
-$EndComp
-$Comp
-L 74xx:74LS08 U2
-U 3 1 5D418CB3
-P 9200 2750
-F 0 "U2" H 9200 2800 50  0000 C CNN
-F 1 "74LS08" H 9200 2700 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9200 2750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9200 2750 50  0001 C CNN
-	3    9200 2750
+P 9400 2750
+F 0 "U2" H 9400 2800 50  0000 C CNN
+F 1 "74LS08" H 9400 2700 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9400 2750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9400 2750 50  0001 C CNN
+	2    9400 2750
 	0    -1   1    0   
 $EndComp
 $Comp
@@ -555,46 +534,26 @@ Wire Wire Line
 Connection ~ 7300 5750
 Wire Wire Line
 	7300 5750 7900 5750
-Text Label 8850 2200 0    50   ~ 0
-MCU_A15
-Text Label 9450 2000 0    50   ~ 0
+Text Label 9750 2000 0    50   ~ 0
 MCU_A13
 Text Label 9150 2100 0    50   ~ 0
 MCU_A14
 Wire Wire Line
-	9950 3700 9950 3250
+	9400 3250 9400 3100
 Wire Wire Line
-	9950 3250 9600 3250
+	10000 3050 10000 3100
 Wire Wire Line
-	9600 3250 9600 3050
-Wire Wire Line
-	9200 3600 9200 3050
-Wire Wire Line
-	10000 3050 10000 3800
-Wire Wire Line
-	10350 2350 9900 2350
-Wire Wire Line
-	9100 2350 9100 2450
-Wire Wire Line
-	9500 2450 9500 2350
-Connection ~ 9500 2350
-Wire Wire Line
-	9500 2350 9100 2350
+	9300 2450 9300 2350
+Connection ~ 9300 2350
 Wire Wire Line
 	9900 2450 9900 2350
 Connection ~ 9900 2350
 Wire Wire Line
-	9900 2350 9500 2350
+	9900 2350 9300 2350
 Wire Wire Line
-	10350 2350 10350 3800
+	7250 2100 9500 2100
 Wire Wire Line
-	7300 2200 9300 2200
-Wire Wire Line
-	9300 2200 9300 2450
-Wire Wire Line
-	7250 2100 9700 2100
-Wire Wire Line
-	9700 2100 9700 2450
+	9500 2100 9500 2450
 Wire Wire Line
 	7200 2000 10100 2000
 Wire Wire Line
@@ -609,4 +568,147 @@ Wire Wire Line
 	7200 5550 7200 5650
 Wire Wire Line
 	5900 5550 7250 5550
+$Comp
+L Jumper:SolderJumper_2_Open JP4
+U 1 1 61108399
+P 10200 3800
+F 0 "JP4" H 10200 3913 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 10200 3914 50  0001 C CNN
+F 2 "pkl_jumpers:J_0402" H 10200 3800 50  0001 C CNN
+F 3 "~" H 10200 3800 50  0001 C CNN
+	1    10200 3800
+	1    0    0    -1  
+$EndComp
+Connection ~ 10350 3800
+Wire Wire Line
+	10050 3800 10000 3800
+Connection ~ 10000 3800
+Wire Wire Line
+	10500 3600 10500 3500
+Wire Wire Line
+	9750 3600 10500 3600
+Text Label 8550 2200 0    50   ~ 0
+MCU_A15
+Wire Wire Line
+	7300 2200 8900 2200
+Wire Wire Line
+	9300 2350 8700 2350
+Wire Wire Line
+	8700 2350 8700 2450
+Wire Wire Line
+	8800 3600 8800 3100
+Wire Wire Line
+	8900 2200 8900 2450
+$Comp
+L 74xx:74LS08 U2
+U 3 1 5D418CB3
+P 8800 2750
+F 0 "U2" H 8800 2800 50  0000 C CNN
+F 1 "74LS08" H 8800 2700 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8800 2750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8800 2750 50  0001 C CNN
+	3    8800 2750
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	9850 3250 9400 3250
+Wire Wire Line
+	9750 3700 9850 3700
+Wire Wire Line
+	9850 3700 9850 3250
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 611634FF
+P 8950 3100
+F 0 "JP1" H 8950 3213 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 8950 3214 50  0001 C CNN
+F 2 "pkl_jumpers:J_0402" H 8950 3100 50  0001 C CNN
+F 3 "~" H 8950 3100 50  0001 C CNN
+	1    8950 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 8800 3100
+Wire Wire Line
+	8800 3100 8800 3050
+Wire Wire Line
+	9100 3100 9100 2450
+Wire Wire Line
+	9100 2450 8900 2450
+Connection ~ 8900 2450
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 611BCCC7
+P 9550 3100
+F 0 "JP2" H 9550 3213 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 9550 3214 50  0001 C CNN
+F 2 "pkl_jumpers:J_0402" H 9550 3100 50  0001 C CNN
+F 3 "~" H 9550 3100 50  0001 C CNN
+	1    9550 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 9400 3100
+Wire Wire Line
+	9400 3100 9400 3050
+Wire Wire Line
+	9700 3100 9700 2450
+Wire Wire Line
+	9700 2450 9500 2450
+Connection ~ 9500 2450
+Wire Wire Line
+	10350 3250 10600 3250
+Wire Wire Line
+	10600 3250 10600 2350
+Wire Wire Line
+	10350 3250 10350 3800
+Wire Wire Line
+	9900 2350 10600 2350
+$Comp
+L Jumper:SolderJumper_2_Open JP3
+U 1 1 611C8E9A
+P 10150 3100
+F 0 "JP3" H 10150 3213 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 10150 3214 50  0001 C CNN
+F 2 "pkl_jumpers:J_0402" H 10150 3100 50  0001 C CNN
+F 3 "~" H 10150 3100 50  0001 C CNN
+	1    10150 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 10000 3100
+Wire Wire Line
+	10000 3100 10000 3800
+Wire Wire Line
+	10300 3100 10300 2450
+Wire Wire Line
+	10300 2450 10100 2450
+Connection ~ 10100 2450
+Text Notes 9600 1400 0    50   ~ 0
+JP1  JP2  JP3  JP4  U2
+Text Notes 8850 1500 0    50   ~ 0
+C64 shortboard
+Text Notes 9650 1600 0    50   ~ 0
+x
+Text Notes 9850 1600 0    50   ~ 0
+x
+Text Notes 10300 1600 0    50   ~ 0
+x
+Wire Notes Line style solid
+	10650 1300 10650 1600
+Wire Notes Line style solid
+	8750 1600 8750 1300
+Wire Notes Line style solid
+	8750 1300 10650 1300
+Wire Notes Line style solid
+	8750 1400 10650 1400
+Wire Notes Line style solid
+	9550 1300 9550 1600
+Wire Notes Line style solid
+	8750 1600 10650 1600
+Text Notes 9050 1400 0    50   ~ 0
+Mode
+Text Notes 8800 1600 0    50   ~ 0
+1541C/1541II 16K
+Text Notes 10500 1500 0    50   ~ 0
+x
+Wire Notes Line
+	10650 1500 8750 1500
 $EndSCHEMATC

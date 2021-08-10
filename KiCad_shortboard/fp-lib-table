@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name pkl_jumpers)(type KiCad)(uri ${KIPRJMOD}/lib/pkl_jumpers.pretty)(options "")(descr ""))
+)

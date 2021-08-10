@@ -14,7 +14,7 @@ mcu-files/C64MultiKernel.mcppi_callertable.txt
 *.dbg
 Thumbs.db
 *.kicad_pcb-bak
-*.kicad_pcb-bak
+*.sch-bak
 *.bak
 KiCad_shortboard/gerber/*
 KiCad_longboard/gerber/*

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name C64-Switchless-Quad-Kernal-Switcher-rescue)(type Legacy)(uri ${KIPRJMOD}/C64-Switchless-Quad-Kernal-Switcher-rescue.lib)(options "")(descr ""))
+)

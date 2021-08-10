@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:C64-Switchless-Quad-Kernal-Switcher-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -376,7 +375,7 @@ Wire Wire Line
 Wire Wire Line
 	6400 5250 7400 5250
 $Comp
-L MCU_Microchip_ATtiny:ATtiny85-20PU U1
+L C64-Switchless-Quad-Kernal-Switcher-rescue:ATtiny85-20PU-MCU_Microchip_ATtiny U1
 U 1 1 5D2A0255
 P 5800 5450
 F 0 "U1" H 5400 6000 50  0000 R CNN
