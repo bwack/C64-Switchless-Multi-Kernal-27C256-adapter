@@ -23,6 +23,7 @@ KiCad_longboard/gerber/*
 *.elf
 *.lss
 *.map
+*.hex
 .DS_Store
 .cproject
 .dep/

@@ -1,0 +1,15 @@
+#ARDUINO_DIR=/home/hans/.arduino15/packages/ATTinyCore/hardware/avr/1.2.0
+include wtf.mk
+
+
+# https://github.com/SpenceKonde/ATTinyCore (1.5+)
+
+#ALTERNATE_CORE = ATTinyCore
+BOARD_TAG = attinyx5
+BOARD_SUB = 85
+VARIANT = tinyX5
+F_CPU = 8000000L
+
+include $(ARDMK_DIR)/Arduino.mk
+
+
