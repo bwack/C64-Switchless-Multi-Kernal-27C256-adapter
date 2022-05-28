@@ -7,15 +7,13 @@
 
 ## Longboard
 
-#### 1.21 
-    
-*Released: `2019 / 07 / 23`*
-  
+#### 1.21   <kbd> 2019 / 07 / 23 </kbd>
+
 - Support 27C512 and 8 banks
 
-#### 1.20
+<br>
 
-*Released: `2019 / 07 / 14`*
+#### 1.20   <kbd> 2019 / 07 / 14 </kbd>
 
 - Eagle -> KiCad.
 - PIC12F629 -> ATTINY45/85. Note: Pinout is different! Don't mix up PIC12F with ATTINY!
@@ -24,49 +22,49 @@
 - Use the original LED or a common cathode RGB LED.
 - User Guide rewritten for this revision.
 
-#### 1.13
+<br>
 
-
-*Released: `2016 / 09 / 28`*
+#### 1.13   <kbd> 2016 / 09 / 28 </kbd>
 
 - Moved IC2 down to clear space for the socket in the c64.
 - Changes to the silk screen.
 
-#### 1.12
+<br>
 
-*Released: `2016 / 09 / 18`*
+#### 1.12   <kbd> 2016 / 09 / 18 </kbd>
 
 - Increased pad and hole sizes.
 - Removed ground fill from top layer.
 - Added CERN OHL v1.2 License.
 
-#### 1.11
+<br>
 
-*Released: `2016 / 09 / 10`*
+#### 1.11   <kbd> 2016 / 09 / 10 </kbd>
 
 - RGB Led header following RGB led pinout (Blue-Green-GND-Red).
 - Edited silkscreen.
 
-#### 1.1
+<br>
 
-*Released: `2016 / 09 / 08`*
+#### 1.1   <kbd> 2016 / 09 / 08 </kbd>
 
 - sch+brd.
 - Swapped signals #RESTORE and RED_LED. GP3 is input only.
 
+
 <br>
+<br>
+
 
 ## Shortboard
 
-#### 1.1
-
-*Released: `2021 / 08 / 10`*
+#### 1.1   <kbd> 2021 / 08 / 10 </kbd>
 
 - jumpers for 1541C/1541-II support
 
-#### 1.0 
+<br>
 
-*Released: `2019 / 07 / 18`*
+#### 1.0   <kbd> 2019 / 07 / 18 </kbd>
 
 - Initial design
 
