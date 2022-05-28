@@ -1,6 +1,19 @@
-README.txt
 
-![logo](User&#32;Guide/media/SKS64-Logos-Ver2.png)
+![Logo]
+
+<br>
+
+<div align = center>
+
+---
+
+[![Button Changelog]][Changelog] 
+
+---
+
+</div>
+
+<br>
 
 ![3D_front](User&#32;Guide/media/Board_overview.png)
 
@@ -94,3 +107,9 @@ The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 
 - Github:   https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
 
 
+<!----------------------------------------------------------------------------->
+
+[Changelog]: Documentation/Changelog.md
+[Logo]: User%20Guide/media/SKS64-Logos-Ver2.png
+
+[Button Changelog]: https://img.shields.io/badge/Changelog-00A8E1?style=for-the-badge&logoColor=white&logo=AzureArtifacts
