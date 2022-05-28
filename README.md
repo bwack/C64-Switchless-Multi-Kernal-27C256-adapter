@@ -7,7 +7,10 @@
 
 ---
 
-[![Button Changelog]][Changelog] 
+[![Button Playlist]][Playlist]   
+[![Button OSHPark]][OSHPark]   
+[![Button Forum]][Forum]   
+[![Button Changelog]][Changelog]
 
 ---
 
@@ -100,16 +103,19 @@ You can solder 1x1mm pin headers into motherboard vias to wire up RESTORE, RESET
 
 The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 Kernal Adaptor Switch shortboard](https://github.com/svenpetersen1965/C64-Kernal-Adaptor-Switch-short-board-). The old shortboard version is located at [DiscoHR's repository](https://github.com/discoHR/C64C-C128-multikernal-adapter). It is possible to use the original LED and cable assembly. This was an idea I found on [tebl's repository](https://github.com/tebl/C64-Kernal-Switcher).
 
-# Project links
-- lemon64:  http://www.lemon64.com/forum/viewtopic.php?p=747333
-- playlist: https://www.youtube.com/watch?v=oGaI8yLwjh4&list=PLtQOf_JULmrQTB7486X5pXG1Aaxbl_RdE
-- OSH Park: https://oshpark.com/profiles/bwack
-- Github:   https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
+<br>
 
 
 <!----------------------------------------------------------------------------->
+
+[Playlist]: https://www.youtube.com/playlist?list=PLtQOf_JULmrQTB7486X5pXG1Aaxbl_RdE
+[OSHPark]: https://oshpark.com/profiles/bwack 'Order The Board'
+[Forum]: http://www.lemon64.com/forum/viewtopic.php?p=747333 'Lemon64 Forum Post'
 
 [Changelog]: Documentation/Changelog.md
 [Logo]: User%20Guide/media/SKS64-Logos-Ver2.png
 
 [Button Changelog]: https://img.shields.io/badge/Changelog-00A8E1?style=for-the-badge&logoColor=white&logo=AzureArtifacts
+[Button Playlist]: https://img.shields.io/badge/Playlist-d13434?style=for-the-badge&logoColor=white&logo=Youtube
+[Button OSHPark]: https://img.shields.io/badge/OSHPark-752c8d?style=for-the-badge&logoColor=white&logo=Houzz
+[Button Forum]: https://img.shields.io/badge/Forum-5287B8?style=for-the-badge
