@@ -1,4 +1,6 @@
 
+[![Badge License]][License]
+
 ![Logo]
 
 <br>
@@ -22,10 +24,6 @@
 
 C64 Switchless Multi Kernel Switch
 - 27C256/512 rom adapter for C64's and disk drives.
-
-Designed by BWACK.
-CERN OPEN HARDWARE LICENSE v1.2
-http://www.ohwr.org/
 
 The CAD files are available on GitHub:
 https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
@@ -113,9 +111,12 @@ The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 
 [Forum]: http://www.lemon64.com/forum/viewtopic.php?p=747333 'Lemon64 Forum Post'
 
 [Changelog]: Documentation/Changelog.md
+[License]: LICENSE
 [Logo]: User%20Guide/media/SKS64-Logos-Ver2.png
 
-[Button Changelog]: https://img.shields.io/badge/Changelog-00A8E1?style=for-the-badge&logoColor=white&logo=AzureArtifacts
+[Badge License]: https://img.shields.io/badge/Open_Hardware-1.2-292961?style=for-the-badge
+
+[Button Changelog]: https://img.shields.io/badge/Changelog-19abdd?style=for-the-badge&logoColor=white&logo=AzureArtifacts
 [Button Playlist]: https://img.shields.io/badge/Playlist-d13434?style=for-the-badge&logoColor=white&logo=Youtube
 [Button OSHPark]: https://img.shields.io/badge/OSHPark-752c8d?style=for-the-badge&logoColor=white&logo=Houzz
 [Button Forum]: https://img.shields.io/badge/Forum-5287B8?style=for-the-badge
