@@ -1,6 +1,8 @@
 
 [![Badge License]][License]
 
+<br>
+
 ![Logo]
 
 <br>
@@ -18,6 +20,7 @@
 
 </div>
 
+<br>
 <br>
 
 ![3D_front](User&#32;Guide/media/Board_overview.png)
