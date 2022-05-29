@@ -1,6 +1,9 @@
 
 # Develop
 
+*Working with the boards.*
+
+<br>
 <br>
 
 
@@ -22,6 +25,7 @@ You can either use a **ISP** or <br>
 *Please see the **[User Guide]** for more information.*
 
 
+<br>
 <br>
 <br>
 
@@ -60,6 +64,7 @@ ROM images are placed in `8k` banks.
 - Place `KERNAL + CBMDOS / JiffyDOS` in a `32k` image ( `27C256` )
 
 
+<br>
 <br>
 <br>
 
