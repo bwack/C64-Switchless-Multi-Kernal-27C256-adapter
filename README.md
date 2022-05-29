@@ -46,15 +46,21 @@
 
 
 
-# Hardware
+## Boards
 
-There are two different PCBs for the SKS64.
-- "longboard": works with C64 longboards and 1541/1541Late.
-- "shortboard": works with C64C shortboards and 1541C/1541-II.
+### Long
 
-Note: The internals of C64/C64C and 1541/1541C are often mixed up, and you must look inside their cases to be sure which boards they have.
+The `longboard` is designed for the <kbd> C64 </kbd> **+** <kbd> 1541 </kbd> **/** <kbd> 1541Late </kbd> .
 
-Gerbers and hex-files (for programming) are found under the release-tab above.
+### Short
+
+The `shortboard` is designed for the <kbd> C64C </kbd> **+** <kbd> 1541C </kbd> **/** <kbd> 1541-II </kbd> .
+
+### Note
+
+*The innards of `C64` / `C64C` and `1541` / `1541C`* <br>
+*are often mixed together, and you must check* <br>
+*their cases to be sure which boards they have.*
 
 
 <br>
