@@ -1,9 +1,12 @@
 
 # Usage
 
-## Switching Kernals
+<br>
+<br>
 
-The current selected Kernal is indicated by a color <br>
+## Switching Kernel
+
+The current selected Kernel is indicated by a color <br>
 using the RGB LED as power LED replacement.
 
 1. Hold the <kbd> RESTORE </kbd> key for several seconds.
@@ -11,10 +14,10 @@ using the RGB LED as power LED replacement.
 2. Release it once the **LED** flashes.
 
 3. Tab <kbd> RESTORE </kbd> until you get <br>
-   the kernal (color) you want.
+   the kernel (color) you want.
 
 4. Wait a couple of seconds for the **C64** <br>
-   to reset with the new kernal selected.
+   to reset with the new kernel selected.
 
 <br>
 
@@ -30,7 +33,7 @@ bank number.
 When the SKS64 board in the disk drive <br>
 is setup to 1541 mode, it will switch to <br>
 the upper bank when the C64 is used <br>
-with bank1, for example JiffyDOS.
+with bank1, for example **[JiffyDOS]**.
 
 <br>
 <br>
@@ -72,3 +75,10 @@ the **ATtiny's** `RESET` pin is disabled.
 
 This can only be done with a High <br>
 Voltage programmer like **TL866**.
+
+<br>
+
+
+<!----------------------------------------------------------------------------->
+
+[JiffyDOS]: http://www.jiffydos.com/
