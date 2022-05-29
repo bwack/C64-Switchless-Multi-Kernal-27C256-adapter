@@ -34,8 +34,6 @@
   height = 300
 />
 
-</div>
-
 <br>
 
 ## Supported Devices
@@ -43,6 +41,9 @@
 ![C64]  ![C64C]  ![1541]  ![1541C]  ![1541-II] 
 
 <br>
+
+</div>
+  
 <br>
 
 ## Boards
