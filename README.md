@@ -18,7 +18,10 @@
 
 [![Button Playlist]][Playlist]   
 [![Button OSHPark]][OSHPark]   
-[![Button Forum]][Forum]   
+[![Button Forum]][Forum]
+
+[![Button Usage]][Usage]  
+[![Button Develop]][Develop]  
 [![Button Changelog]][Changelog]
 
 ---
@@ -38,24 +41,7 @@
 
 <br>
 
-# How it works
 
-## Switching Kernals
-
-The current selected Kernal is indicated by a color using the RGB LED as power LED replacement. Holding the RESTORE key for several seconds until the LED flashes. You then release it and tap RESTORE until you get the kernal (color) you want. Wait a couple of seconds and the C64 reset with the new kernal selected.
-
-1541 disk drives:
-Now you can have the disk drive and the C64 switch at the same time! The reset pulse issued by the SKS64 now has prepended serial data indicating the bank number. When the SKS64 board in the disk drive is setup in 1541 mode, it will switch to the upper bank when the C64 is switched to bank1 (for example, JiffyDOS).
-
-## Reset
-
-Hold the RESTORE key for two seconds. The LED flashes. Release and wait two seconds for the reset.
-
-## EXROM Reset (optional)
-
-Hold the RESTORE key for five seconds. Some machine language programs change the way computer returns after a reset. In that case the only way to reset to basic is to turn the machine off. By controlling both RESET and EXROM it is possible to "cold start" the machine.
-
-Note: EXROM reset is only available when the ATtiny's RESET pin is disabled (fuse bit #RSTDISBL). This can only be done with HV-programmers (like TL866).
 
 # Hardware
 
@@ -115,8 +101,10 @@ The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 
 [Forum]: http://www.lemon64.com/forum/viewtopic.php?p=747333 'Lemon64 Forum Post'
 
 [Changelog]: Documentation/Changelog.md
+[Develop]: Documentation/Develop.md
 [Preview]: User%20Guide/media/Board_overview.png
 [License]: LICENSE
+[Usage]: Documentation/Usage.md
 [Logo]: User%20Guide/media/SKS64-Logos-Ver2.png
 
 [Badge License]: https://img.shields.io/badge/Open_Hardware-1.2-292961?style=for-the-badge
@@ -135,5 +123,7 @@ The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 
 
 [Button Changelog]: https://img.shields.io/badge/Changelog-19abdd?style=for-the-badge&logoColor=white&logo=AzureArtifacts
 [Button Playlist]: https://img.shields.io/badge/Playlist-d13434?style=for-the-badge&logoColor=white&logo=Youtube
+[Button Develop]: https://img.shields.io/badge/Develop-00979D?style=for-the-badge&logoColor=white&logo=Arduino
 [Button OSHPark]: https://img.shields.io/badge/OSHPark-752c8d?style=for-the-badge&logoColor=white&logo=Houzz
-[Button Forum]: https://img.shields.io/badge/Forum-5287B8?style=for-the-badge
+[Button Usage]: https://img.shields.io/badge/Usage-ED145B?style=for-the-badge&logoColor=white&logo=AppleArcade
+[Button Forum]: https://img.shields.io/badge/Forum-5287B8?style=for-the-badge&logoColor=white&logo=AskUbuntu
