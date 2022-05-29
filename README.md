@@ -26,12 +26,15 @@
 
 ---
 
+<br>
+<br>
+
+<img
+  src = 'User%20Guide/media/Board_overview.png'
+  height = 300
+/>
+
 </div>
-
-<br>
-<br>
-
-![Preview]
 
 <br>
 
@@ -102,7 +105,6 @@ The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 
 
 [Changelog]: Documentation/Changelog.md
 [Develop]: Documentation/Develop.md
-[Preview]: User%20Guide/media/Board_overview.png
 [License]: LICENSE
 [Usage]: Documentation/Usage.md
 [Logo]: User%20Guide/media/SKS64-Logos-Ver2.png
@@ -122,7 +124,7 @@ The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 
 <!--------------------------------{ Buttons }---------------------------------->
 
 [Button Changelog]: https://img.shields.io/badge/Changelog-19abdd?style=for-the-badge&logoColor=white&logo=AzureArtifacts
-[Button Playlist]: https://img.shields.io/badge/Playlist-d13434?style=for-the-badge&logoColor=white&logo=Youtube
+[Button Playlist]: https://img.shields.io/badge/Playlist-FF0000?style=for-the-badge&logoColor=white&logo=Youtube
 [Button Develop]: https://img.shields.io/badge/Develop-00979D?style=for-the-badge&logoColor=white&logo=Arduino
 [Button OSHPark]: https://img.shields.io/badge/OSHPark-752c8d?style=for-the-badge&logoColor=white&logo=Houzz
 [Button Usage]: https://img.shields.io/badge/Usage-ED145B?style=for-the-badge&logoColor=white&logo=AppleArcade
