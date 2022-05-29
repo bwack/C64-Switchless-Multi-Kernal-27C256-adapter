@@ -9,6 +9,11 @@
 
 <div align = center>
 
+***A C64 + Disk Drives Switch-less Multi*** <br>
+***Kernel ROM Adapter / Switcher***
+
+<br>
+
 ---
 
 [![Button Playlist]][Playlist]   
@@ -23,19 +28,15 @@
 <br>
 <br>
 
-![3D_front](User&#32;Guide/media/Board_overview.png)
+![Preview]
 
-C64 Switchless Multi Kernel Switch
-- 27C256/512 rom adapter for C64's and disk drives.
+<br>
 
-The CAD files are available on GitHub:
-https://github.com/bwack/C64-Switchless-Multi-Kernal-27C256-adapter
+## Supported Devices
 
-All text above must be included in any redistribution
+![C64]  ![C64C]  ![1541]  ![1541C]  ![1541-II] 
 
-# SKS64 Switchless Kernal Switcher
-
-A kernal ROM adapter and switcher for C64, C64C, 1541, 1541C and 1541-II. The software is written in the Arduino IDE.
+<br>
 
 # How it works
 
@@ -114,10 +115,23 @@ The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 
 [Forum]: http://www.lemon64.com/forum/viewtopic.php?p=747333 'Lemon64 Forum Post'
 
 [Changelog]: Documentation/Changelog.md
+[Preview]: User%20Guide/media/Board_overview.png
 [License]: LICENSE
 [Logo]: User%20Guide/media/SKS64-Logos-Ver2.png
 
 [Badge License]: https://img.shields.io/badge/Open_Hardware-1.2-292961?style=for-the-badge
+
+
+<!--------------------------------{ Devices }---------------------------------->
+
+[1541-II]: https://img.shields.io/badge/１５４１－ＩＩ-d7cdbb?style=flat
+[1541C]: https://img.shields.io/badge/１５４１Ｃ-d7cdbb?style=flat
+[1541]: https://img.shields.io/badge/１５４１-d7cdbb?style=flat
+[C64C]: https://img.shields.io/badge/Ｃ６４Ｃ-d7cdbb?style=flat
+[C64]: https://img.shields.io/badge/Ｃ６４-d7cdbb?style=flat
+
+
+<!--------------------------------{ Buttons }---------------------------------->
 
 [Button Changelog]: https://img.shields.io/badge/Changelog-19abdd?style=for-the-badge&logoColor=white&logo=AzureArtifacts
 [Button Playlist]: https://img.shields.io/badge/Playlist-d13434?style=for-the-badge&logoColor=white&logo=Youtube
