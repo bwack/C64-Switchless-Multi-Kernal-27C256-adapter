@@ -43,26 +43,31 @@
 ![C64]  ![C64C]  ![1541]  ![1541C]  ![1541-II] 
 
 <br>
-
-
+<br>
 
 ## Boards
 
 ### Long
 
-The `longboard` is designed for the <kbd> C64 </kbd> **+** <kbd> 1541 </kbd> **/** <kbd> 1541Late </kbd> .
+The  `longboard`  is designed for <br>
+the  <kbd> C64 </kbd>  **+**  <kbd> 1541 </kbd>  **/**  <kbd> 1541Late </kbd>
+
+<br>
 
 ### Short
 
-The `shortboard` is designed for the <kbd> C64C </kbd> **+** <kbd> 1541C </kbd> **/** <kbd> 1541-II </kbd> .
+The  `shortboard`  is designed for <br>
+the  <kbd> C64C </kbd>  **+**  <kbd> 1541C </kbd>  **/**  <kbd> 1541-II </kbd>
+
+<br>
 
 ### Note
 
-*The innards of `C64` / `C64C` and `1541` / `1541C`* <br>
-*are often mixed together, and you must check* <br>
-*their cases to be sure which boards they have.*
+*The innards of  `C64`  /  `C64C`  and  `1541`  /  `1541C`* <br>
+*are often mixed together, and you must check their* <br>
+*cases to be sure which boards they have.*
 
-
+<br>
 <br>
 
 ## Acknowledgment
