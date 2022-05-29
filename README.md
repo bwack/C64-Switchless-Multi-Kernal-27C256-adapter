@@ -82,7 +82,7 @@ the  <kbd> C64C </kbd>  **+**  <kbd> 1541C </kbd>  **/**
 
 *It is possible to reused the original LED / Cable assembly.*
 
-### Idea   [<kbd> Tebl </kbd>][DiscoHR]
+### Idea From   [<kbd> Tebl </kbd>][DiscoHR]
 
 *[C64 Kernal Switcher]*
 
