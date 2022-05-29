@@ -57,10 +57,23 @@ Note: The internals of C64/C64C and 1541/1541C are often mixed up, and you must 
 Gerbers and hex-files (for programming) are found under the release-tab above.
 
 
+<br>
 
-# Acknowledgement
+## Acknowledgment
 
-The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 Kernal Adaptor Switch shortboard](https://github.com/svenpetersen1965/C64-Kernal-Adaptor-Switch-short-board-). The old shortboard version is located at [DiscoHR's repository](https://github.com/discoHR/C64C-C128-multikernal-adapter). It is possible to use the original LED and cable assembly. This was an idea I found on [tebl's repository](https://github.com/tebl/C64-Kernal-Switcher).
+### Based On   [<kbd> Sven Petersen </kbd>][Petersen]
+
+*[C64 Kernal Adaptor Switch Shortboard]*
+
+### Old Version   [<kbd> DiscoHR </kbd>][DiscoHR]
+
+*[C64C C128 Multikernal Adapter]*
+
+*It is possible to reused the original LED / Cable assembly.*
+
+### Idea   [<kbd> Tebl </kbd>][DiscoHR]
+
+*[C64 Kernal Switcher]*
 
 <br>
 
@@ -87,6 +100,17 @@ The Switchless Kernal Switcher for shortboards is based on Sven Petersen's [C64 
 [1541]: https://img.shields.io/badge/１５４１-d7cdbb?style=flat
 [C64C]: https://img.shields.io/badge/Ｃ６４Ｃ-d7cdbb?style=flat
 [C64]: https://img.shields.io/badge/Ｃ６４-d7cdbb?style=flat
+
+
+<!----------------------------{ Acknowledgment }------------------------------->
+
+[C64 Kernal Adaptor Switch Shortboard]: https://github.com/svenpetersen1965/C64-Kernal-Adaptor-Switch-short-board-
+[C64C C128 Multikernal Adapter]: https://github.com/discoHR/C64C-C128-multikernal-adapter
+[C64 Kernal Switcher]: https://github.com/tebl/C64-Kernal-Switcher
+
+[Petersen]: https://github.com/svenpetersen1965
+[DiscoHR]: https://github.com/discoHR
+[Tebl]: https://github.com/tebl
 
 
 <!--------------------------------{ Buttons }---------------------------------->
